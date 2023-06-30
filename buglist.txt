@@ -254,11 +254,13 @@
 ' version 0.1.00 - release on github as both a setup.exe and as code - done
 
 ' create link to github for the update button on the about page - done
-
+' create readme.md file for github - done
 ' test on win 11 - where RC5 has been already installed, Avast triggers but all good - done
+' test on Linux with WINE blank install on desktop - done
+
+' test on Linux with WINE blank install on laptop - done
 ' test on win 7 32bit - study 2nd PC - wip 
 ' test on win 10 64bit - study 1st  PC - wip 
-' create readme.md file for github - wip
 
 ' -oOo-
 
@@ -267,7 +269,7 @@
 
 ' upload the code (no setup.exe) to the VBforums codebank
 ' test on win XP 32bit blank install, no RC5 at all
-' test on Linux with WINE 32bit blank install
+
 ' create good landing pages for each link in the sub menu
 ' build new CHM containing valid links
 ' build new setup.exe containing valid links

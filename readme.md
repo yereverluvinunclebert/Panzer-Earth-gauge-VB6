@@ -72,16 +72,15 @@ original artist using my name or one of my pseudonyms and a link to my site.
 With regard to the commercial use of incorporated images, permission and a 
 licence would need to be obtained from the original owner and creator, ie. me.
 
-
 Tested on :
-           ReactOS 0.4.14 32bit on virtualBox
-           Windows 7 Professional 32bit on Intel - wip
-           Windows 7 Ultimate 64bit on Intel
-           Windows 7 Professional 64bit on Intel - done
-           Windows XP SP3 32bit on Intel - wip
-           Windows 10 Home 64bit on Intel - done
-           Windows 10 Home 64bit on AMD
-           Windows 11 64bit on Intel - done
+   ReactOS 0.4.14 32bit on virtualBox
+   windows 7 professional 32bit on intel - wip
+   windows 7 ultimate 64bit on intel
+   windows 7 professional 64bit on intel - done
+   windows xp sp3 32bit on intel - wip
+   windows 10 home 64bit on intel - done
+   windows 10 home 64bit on amd
+   windows 11 64bit on intel - done
 
 Dependencies:
 
