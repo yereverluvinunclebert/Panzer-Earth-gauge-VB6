@@ -1388,7 +1388,6 @@ Public Sub mnuCoffee_ClickEvent()
         Call ShellExecute(menuForm.hwnd, "Open", "https://www.ko-fi.com/yereverluvinunclebert", vbNullString, App.Path, 1)
     End If
 
-
    On Error GoTo 0
    Exit Sub
 

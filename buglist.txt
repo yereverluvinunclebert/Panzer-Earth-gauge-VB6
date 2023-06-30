@@ -253,30 +253,29 @@
 ' update github source area - done
 ' version 0.1.00 - release on github as both a setup.exe and as code - done
 
-' -oOo-
+' create link to github for the update button on the about page - done
 
-' test on win 11 - where RC5 has been already installed - wip
+' test on win 11 - where RC5 has been already installed, Avast triggers but all good - done
 ' test on win 7 32bit - study 2nd PC - wip 
+' test on win 10 64bit - study 1st  PC - wip 
 ' create readme.md file for github - wip
-' create link to github for the update button on the about page - wip
 
-' version 0.1.00 - release on VBForums codebank as zip 
-
+' -oOo-
 
 ' Tasks yet to do to complete 0.1.0
 ' =================================
 
+' upload the code (no setup.exe) to the VBforums codebank
 ' test on win XP 32bit blank install, no RC5 at all
 ' test on Linux with WINE 32bit blank install
+' create good landing pages for each link in the sub menu
+' build new CHM containing valid links
+' build new setup.exe containing valid links
 
 ' -oOo-
 
 ' Tasks yet to do in later versions.
 ' ==================================
-
-
-' create good landing pages for each link in the sub menu
-
 
 ' lightquick - resurrect
 
