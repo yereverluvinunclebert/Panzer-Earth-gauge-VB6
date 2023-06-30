@@ -1406,18 +1406,14 @@ End Sub
 '
 Public Sub mnuSupport_ClickEvent()
 
-    'Dim answer As VbMsgBoxResult: answer = vbNo
-    '''If debugflg = 1  Then msgBox "%" & "mnuSupport_Click"
-
-   On Error GoTo mnuSupport_ClickEvent_Error
-
-    MsgBox "The github support menu option is not yet enabled."
+    Dim answer As VbMsgBoxResult: answer = vbNo
+    On Error GoTo mnuSupport_ClickEvent_Error
     
-'    answer = MsgBox("Visiting the support page - this button opens a browser window and connects to our contact us page where you can send us a support query or just have a chat). Proceed?", vbExclamation + vbYesNo)
-'
-'    If answer = vbYes Then
-'        Call ShellExecute(Me.hwnd, "Open", "https://www.deviantart.com/yereverluvinuncleber/art/panzerEarthPrefs-VB6-Desktop-784624943", vbNullString, App.Path, 1)
-'    End If
+    answer = MsgBox("Visiting the support page - this button opens a browser window and connects to our Github issues page where you can send us a support query. Proceed?", vbExclamation + vbYesNo)
+
+    If answer = vbYes Then
+        Call ShellExecute(menuForm.hwnd, "Open", "https://github.com/yereverluvinunclebert/Panzer-Earth-gauge-VB6/issues", vbNullString, App.Path, 1)
+    End If
 
    On Error GoTo 0
    Exit Sub
