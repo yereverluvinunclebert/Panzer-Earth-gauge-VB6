@@ -12,7 +12,9 @@ This widgets functionality is limited as it is just a template for widgets yet
 to come, however, it can be increased in size, animation speed can be changed, 
 opacity/transparency may be set as to the users discretion. The widget can 
 also be made to hide for a pre-determined period.
- 
+
+![menu01](https://github.com/yereverluvinunclebert/Panzer-Earth-gauge-VB6/assets/2788342/47d3a391-ae43-4d63-9633-4fb28e5eae72)
+
 Right-click on the widget to display the function menu, mouse hover over the 
 widget and press CTRL+mousewheel up/down to resize. It works well on Windows XP 
 to Windows 11.
