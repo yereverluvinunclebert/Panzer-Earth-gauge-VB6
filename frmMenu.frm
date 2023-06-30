@@ -472,18 +472,18 @@ End Sub
 '---------------------------------------------------------------------------------------
 '
 Public Sub mnuLatest_Click()
-'    Dim answer As VbMsgBoxResult: answer = vbno
+    Dim answer As VbMsgBoxResult: answer = vbNo
 
     On Error GoTo mnuLatest_Click_Error
     '''If debugflg = 1  Then msgBox "%" & "mnuLatest_Click"
     
-    MsgBox "The download menu option is not yet enabled."
+    'MsgBox "The download menu option is not yet enabled."
 
-'    answer = MsgBox("Download latest version of the program - this button opens a browser window and connects to the widget download page where you can check and download the latest zipped file). Proceed?", vbExclamation + vbYesNo)
-'
-'    If answer = vbYes Then
-'        Call ShellExecute(Me.hwnd, "Open", "https://www.deviantart.com/yereverluvinuncleber/art/panzerEarthPrefs-VB6-Desktop-784624943", vbNullString, App.Path, 1)
-'    End If
+    answer = MsgBox("Download latest version of the program from github - this button opens a browser window and connects to the widget download page where you can check and download the latest SETUP.EXE file). Proceed?", vbExclamation + vbYesNo)
+
+    If answer = vbYes Then
+        Call ShellExecute(Me.hwnd, "Open", "https://github.com/yereverluvinunclebert/Panzer-Earth-gauge-VB6", vbNullString, App.Path, 1)
+    End If
 
 
     On Error GoTo 0

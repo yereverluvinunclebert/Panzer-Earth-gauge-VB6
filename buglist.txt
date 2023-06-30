@@ -249,13 +249,19 @@
 ' created a mainRoutine called by sub main() to allow it to be called by any function, you cannot run sub main() at will - done
 ' sorted some declarations to revert to private - done
 
-' test on win 11 - where RC5 has been already installed - wip
-' test on win 7 32bit - study 2nd PC - wip 
+' create github repository area - done
+' update github source area - done
+' version 0.1.00 - release on github as both a setup.exe and as code - done
 
 ' -oOo-
 
-' create github source area - wip
-' version 0.1.00 - release on github as both a setup.exe and as code
+' test on win 11 - where RC5 has been already installed - wip
+' test on win 7 32bit - study 2nd PC - wip 
+' create readme.md file for github - wip
+' create link to github for the update button on the about page - wip
+
+' version 0.1.00 - release on VBForums codebank as zip 
+
 
 ' Tasks yet to do to complete 0.1.0
 ' =================================
@@ -268,9 +274,9 @@
 ' Tasks yet to do in later versions.
 ' ==================================
 
-' add link to github - wip
+
 ' create good landing pages for each link in the sub menu
-' create good landing pages for each button on the about page
+
 
 ' lightquick - resurrect
 
