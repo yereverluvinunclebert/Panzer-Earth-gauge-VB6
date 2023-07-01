@@ -69,14 +69,14 @@ unwitting source of inspiration.
 
 Tested on :
 
-   ReactOS 0.4.14 32bit on virtualBox  
-   windows 7 professional 32bit on intel  
-   windows 7 ultimate 64bit on intel  
-   windows 7 professional 64bit on intel  
-   windows xp sp3 32bit on intel   
-   windows 10 home 64bit on intel  
-   windows 10 home 64bit on amd  
-   windows 11 64bit on intel   
+	ReactOS 0.4.14 32bit on virtualBox  
+	windows 7 professional 32bit on intel  
+	windows 7 ultimate 64bit on intel  
+	windows 7 professional 64bit on intel  
+	windows xp sp3 32bit on intel   
+	windows 10 home 64bit on intel  
+	windows 10 home 64bit on amd  
+	windows 11 64bit on intel   
 
 Dependencies:
 
@@ -137,11 +137,11 @@ HELP folder.
 
  Project References:
 
-   VisualBasic for Applications  
-   VisualBasic Runtime Objects and Procedures  
-   VisualBasic Objects and Procedures  
-   OLE Automation  
-   vbRichClient5  
+	VisualBasic for Applications  
+	VisualBasic Runtime Objects and Procedures  
+	VisualBasic Objects and Procedures  
+	OLE Automation  
+	vbRichClient5  
 
 
 LICENCE AGREEMENTS:
