@@ -1,5 +1,5 @@
 # Panzer-Earth-gauge-VB6
- A FOSS Earth VB6 Widget for Windows.
+ A FOSS Earth VB6 Widget for Reactos, XP, Win7, 8 and 10+.
  
 The Panzer Earth VB6 gauge is a simple utility displaying a rotating earth in a
 dieselpunk fashion on your desktop. It can be resized and placed anywhere on 
