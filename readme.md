@@ -1,19 +1,26 @@
 # Panzer-Earth-gauge-VB6
- A FOSS Earth VB6 Widget for Windows.
+ A FOSS Earth VB6 Widget for Reactos, XP, Win7, 8 and 10+.
  
 The Panzer Earth VB6 gauge is a simple utility displaying a rotating earth in a
 dieselpunk fashion on your desktop. It can be resized and placed anywhere on 
 your desktop. It uses minimal resources and helps give your desktop a 
 dieselpunk make-over. 
 
+![earth-small](https://github.com/yereverluvinunclebert/Panzer-Earth-gauge-VB6/assets/2788342/519b21a2-9904-4204-8f96-377d54d74f21)
+
 This widgets functionality is limited as it is just a template for widgets yet
 to come, however, it can be increased in size, animation speed can be changed, 
 opacity/transparency may be set as to the users discretion. The widget can 
 also be made to hide for a pre-determined period.
- 
+
+![menu01](https://github.com/yereverluvinunclebert/Panzer-Earth-gauge-VB6/assets/2788342/47d3a391-ae43-4d63-9633-4fb28e5eae72)
+
 Right-click on the widget to display the function menu, mouse hover over the 
 widget and press CTRL+mousewheel up/down to resize. It works well on Windows XP 
 to Windows 11.
+
+The Panzer Earth VB6 gauge is Beta-grade software, under development, not yet 
+ready to use on a production system - use at your own risk.
 
 This version was developed on Windows 7 using 32 bit VisualBasic 6 as a FOSS 
 project creating a WoW64 widget for the desktop. 
@@ -60,28 +67,16 @@ Elroy on VB forums for the balloon tooltips
 Harry Whitfield for his quality testing, brain stimulation and being an 
 unwitting source of inspiration.
 
-
-LICENCE AGREEMENTS:
-
-Copyright © 2023 Dean Beedell
-
-In addition to the GNU General Public Licence please be aware that you may use 
-any of my own imagery in your own creations but commercially only with my 
-permission. In all other non-commercial cases I require a credit to the 
-original artist using my name or one of my pseudonyms and a link to my site. 
-With regard to the commercial use of incorporated images, permission and a 
-licence would need to be obtained from the original owner and creator, ie. me.
-
-
 Tested on :
-           ReactOS 0.4.14 32bit on virtualBox
-           Windows 7 Professional 32bit on Intel - wip
-           Windows 7 Ultimate 64bit on Intel
-           Windows 7 Professional 64bit on Intel - done
-           Windows XP SP3 32bit on Intel - wip
-           Windows 10 Home 64bit on Intel - done
-           Windows 10 Home 64bit on AMD
-           Windows 11 64bit on Intel - done
+
+	ReactOS 0.4.14 32bit on virtualBox  
+	windows 7 professional 32bit on intel  
+	windows 7 ultimate 64bit on intel  
+	windows 7 professional 64bit on intel  
+	windows xp sp3 32bit on intel   
+	windows 10 home 64bit on intel  
+	windows 10 home 64bit on amd  
+	windows 11 64bit on intel   
 
 Dependencies:
 
@@ -142,8 +137,20 @@ HELP folder.
 
  Project References:
 
-           VisualBasic for Applications
-           VisualBasic Runtime Objects and Procedures
-           VisualBasic Objects and Procedures
-           OLE Automation
-           vbRichClient5
+	VisualBasic for Applications  
+	VisualBasic Runtime Objects and Procedures  
+	VisualBasic Objects and Procedures  
+	OLE Automation  
+	vbRichClient5  
+
+
+LICENCE AGREEMENTS:
+
+Copyright Â© 2023 Dean Beedell
+
+In addition to the GNU General Public Licence please be aware that you may use 
+any of my own imagery in your own creations but commercially only with my 
+permission. In all other non-commercial cases I require a credit to the 
+original artist using my name or one of my pseudonyms and a link to my site. 
+With regard to the commercial use of incorporated images, permission and a 
+licence would need to be obtained from the original owner and creator, ie. me.
