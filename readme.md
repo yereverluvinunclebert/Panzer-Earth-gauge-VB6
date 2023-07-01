@@ -19,6 +19,9 @@ Right-click on the widget to display the function menu, mouse hover over the
 widget and press CTRL+mousewheel up/down to resize. It works well on Windows XP 
 to Windows 11.
 
+The Panzer Earth VB6 gauge is Beta-grade software, under development, not yet 
+ready to use on a production system - use at your own risk.
+
 This version was developed on Windows 7 using 32 bit VisualBasic 6 as a FOSS 
 project creating a WoW64 widget for the desktop. 
 
