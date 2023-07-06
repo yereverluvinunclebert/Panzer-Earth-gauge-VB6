@@ -259,6 +259,9 @@
 ' test on Linux with WINE blank install on desktop - done
 
 ' test on Linux with WINE blank install on laptop - done
+
+' create good landing pages for each link in the sub menu - done
+
 ' test on win 7 32bit - study 2nd PC - wip 
 ' test on win 10 64bit - study 1st  PC - wip 
 
@@ -267,12 +270,12 @@
 ' Tasks yet to do to complete 0.1.0
 ' =================================
 
-' upload the code (no setup.exe) to the VBforums codebank
 ' test on win XP 32bit blank install, no RC5 at all
 
-' create good landing pages for each link in the sub menu
 ' build new CHM containing valid links
 ' build new setup.exe containing valid links
+
+' upload the code (no setup.exe) to the VBforums codebank
 
 ' -oOo-
 
