@@ -23,7 +23,7 @@ Begin VB.Form panzerEarthPrefs
       Caption         =   "Enable Corner Resize"
       Height          =   210
       Left            =   3225
-      TabIndex        =   151
+      TabIndex        =   146
       Top             =   10125
       Width           =   2250
    End
@@ -31,14 +31,14 @@ Begin VB.Form panzerEarthPrefs
       BorderStyle     =   0  'None
       Height          =   1140
       Left            =   7695
-      TabIndex        =   118
+      TabIndex        =   113
       Top             =   0
       Width           =   975
       Begin VB.Label lblAbout 
          Caption         =   "About"
          Height          =   240
          Left            =   255
-         TabIndex        =   119
+         TabIndex        =   114
          Top             =   855
          Width           =   615
       End
@@ -330,69 +330,69 @@ Begin VB.Form panzerEarthPrefs
       Top             =   1200
       Visible         =   0   'False
       Width           =   8520
-      Begin VB.Frame fraDefaultEditor 
-         BorderStyle     =   0  'None
-         Height          =   2250
-         Left            =   960
-         TabIndex        =   113
-         Top             =   3420
-         Width           =   6075
-         Begin VB.TextBox txtDefaultEditor 
-            Height          =   315
-            Left            =   1440
-            TabIndex        =   115
-            Text            =   " eg. E:\vb6\fire call\FireCallWin.vbp"
-            ToolTipText     =   $"frmPrefs.frx":5C56
-            Top             =   195
-            Width           =   3660
-         End
-         Begin VB.CommandButton btnDefaultEditor 
-            Caption         =   "..."
-            Height          =   300
-            Left            =   5115
-            Style           =   1  'Graphical
-            TabIndex        =   114
-            ToolTipText     =   "Click to select the .vbp file to edit the program - You need to have access to the source!"
-            Top             =   210
-            Width           =   315
-         End
-         Begin VB.Label lblGitHub 
-            Caption         =   $"frmPrefs.frx":5CE8
-            ForeColor       =   &H8000000D&
-            Height          =   735
-            Left            =   1530
-            TabIndex        =   154
-            ToolTipText     =   "Click to visit github"
-            Top             =   1620
-            Width           =   5430
-         End
-         Begin VB.Label lblDebug 
-            Caption         =   "Default Editor :"
-            Height          =   255
-            Index           =   7
-            Left            =   285
-            TabIndex        =   117
-            Tag             =   "lblSharedInputFile"
-            Top             =   225
-            Width           =   1350
-         End
-         Begin VB.Label lblDebug 
-            Caption         =   $"frmPrefs.frx":5D7C
-            Height          =   930
-            Index           =   9
-            Left            =   1545
-            TabIndex        =   116
-            Top             =   690
-            Width           =   3900
-         End
-      End
       Begin VB.Frame fraDevelopmentInner 
          BorderStyle     =   0  'None
          Height          =   5595
-         Left            =   900
+         Left            =   870
          TabIndex        =   51
          Top             =   300
-         Width           =   7575
+         Width           =   7455
+         Begin VB.Frame fraDefaultEditor 
+            BorderStyle     =   0  'None
+            Height          =   2250
+            Left            =   75
+            TabIndex        =   149
+            Top             =   3165
+            Width           =   7290
+            Begin VB.CommandButton btnDefaultEditor 
+               Caption         =   "..."
+               Height          =   300
+               Left            =   5115
+               Style           =   1  'Graphical
+               TabIndex        =   151
+               ToolTipText     =   "Click to select the .vbp file to edit the program - You need to have access to the source!"
+               Top             =   210
+               Width           =   315
+            End
+            Begin VB.TextBox txtDefaultEditor 
+               Height          =   315
+               Left            =   1440
+               TabIndex        =   150
+               Text            =   " eg. E:\vb6\fire call\FireCallWin.vbp"
+               ToolTipText     =   $"frmPrefs.frx":5C56
+               Top             =   195
+               Width           =   3660
+            End
+            Begin VB.Label lblDebug 
+               Caption         =   $"frmPrefs.frx":5CE8
+               Height          =   930
+               Index           =   9
+               Left            =   1545
+               TabIndex        =   154
+               Top             =   690
+               Width           =   3900
+            End
+            Begin VB.Label lblDebug 
+               Caption         =   "Default Editor :"
+               Height          =   255
+               Index           =   7
+               Left            =   285
+               TabIndex        =   153
+               Tag             =   "lblSharedInputFile"
+               Top             =   225
+               Width           =   1350
+            End
+            Begin VB.Label lblGitHub 
+               Caption         =   $"frmPrefs.frx":5D8C
+               ForeColor       =   &H8000000D&
+               Height          =   735
+               Left            =   1530
+               TabIndex        =   152
+               ToolTipText     =   "Click to visit github"
+               Top             =   1620
+               Width           =   5430
+            End
+         End
          Begin VB.TextBox txtDblClickCommand 
             Height          =   315
             Left            =   1515
@@ -555,14 +555,14 @@ Begin VB.Form panzerEarthPrefs
             BorderStyle     =   0  'None
             Height          =   2010
             Left            =   480
-            TabIndex        =   140
+            TabIndex        =   135
             Top             =   2325
             Width           =   5130
             Begin VB.ComboBox cmbHidingTime 
                Height          =   315
                Left            =   825
                Style           =   2  'Dropdown List
-               TabIndex        =   143
+               TabIndex        =   138
                Top             =   1680
                Width           =   3720
             End
@@ -570,7 +570,7 @@ Begin VB.Form panzerEarthPrefs
                Caption         =   "Hiding Widget *"
                Height          =   225
                Left            =   855
-               TabIndex        =   141
+               TabIndex        =   136
                Top             =   225
                Width           =   2955
             End
@@ -579,7 +579,7 @@ Begin VB.Form panzerEarthPrefs
                Height          =   345
                Index           =   2
                Left            =   90
-               TabIndex        =   144
+               TabIndex        =   139
                Top             =   210
                Width           =   720
             End
@@ -588,7 +588,7 @@ Begin VB.Form panzerEarthPrefs
                Height          =   975
                Index           =   1
                Left            =   855
-               TabIndex        =   142
+               TabIndex        =   137
                Top             =   600
                Width           =   3900
             End
@@ -630,7 +630,7 @@ Begin VB.Form panzerEarthPrefs
             Caption         =   "This setting controls the relative layering of this widget. You may use it to place it on top of other windows or underneath. "
             Height          =   660
             Left            =   1320
-            TabIndex        =   149
+            TabIndex        =   144
             Top             =   570
             Width           =   3810
          End
@@ -772,7 +772,7 @@ Begin VB.Form panzerEarthPrefs
             Height          =   660
             Index           =   6
             Left            =   2025
-            TabIndex        =   139
+            TabIndex        =   134
             Top             =   2145
             Width           =   3930
          End
@@ -879,7 +879,7 @@ Begin VB.Form panzerEarthPrefs
             Height          =   315
             Left            =   4125
             Locked          =   -1  'True
-            TabIndex        =   152
+            TabIndex        =   147
             ToolTipText     =   "Disabled for manual input. Shows the current font size when form resizing is enabled."
             Top             =   1065
             Visible         =   0   'False
@@ -919,7 +919,7 @@ Begin VB.Form panzerEarthPrefs
             Caption         =   "Current font"
             Height          =   315
             Left            =   4875
-            TabIndex        =   153
+            TabIndex        =   148
             ToolTipText     =   "Disabled for manual input. Shows the current font size when form resizing is enabled."
             Top             =   1110
             Visible         =   0   'False
@@ -1177,7 +1177,7 @@ Begin VB.Form panzerEarthPrefs
             Caption         =   "Widget Position Locked. *"
             Height          =   225
             Left            =   2265
-            TabIndex        =   147
+            TabIndex        =   142
             ToolTipText     =   "Checking this box turns off the ability to drag the program with the mouse, locking it in position."
             Top             =   3465
             Width           =   2505
@@ -1262,7 +1262,7 @@ Begin VB.Form panzerEarthPrefs
             Height          =   255
             Index           =   1
             Left            =   4545
-            TabIndex        =   150
+            TabIndex        =   145
             Tag             =   "lblAlarmSound"
             Top             =   45
             Width           =   345
@@ -1271,7 +1271,7 @@ Begin VB.Form panzerEarthPrefs
             Caption         =   "(px)"
             Height          =   300
             Left            =   4530
-            TabIndex        =   146
+            TabIndex        =   141
             Tag             =   "lblPrefixString"
             Top             =   4905
             Width           =   435
@@ -1280,7 +1280,7 @@ Begin VB.Form panzerEarthPrefs
             Caption         =   "(px)"
             Height          =   300
             Left            =   4530
-            TabIndex        =   145
+            TabIndex        =   140
             Tag             =   "lblPrefixString"
             Top             =   4500
             Width           =   390
@@ -1402,7 +1402,7 @@ Begin VB.Form panzerEarthPrefs
       Caption         =   "About"
       Height          =   8580
       Left            =   255
-      TabIndex        =   120
+      TabIndex        =   115
       Top             =   1185
       Visible         =   0   'False
       Width           =   8520
@@ -1410,7 +1410,7 @@ Begin VB.Form panzerEarthPrefs
          BorderStyle     =   0  'None
          Height          =   6435
          Left            =   7950
-         TabIndex        =   134
+         TabIndex        =   129
          Top             =   1995
          Width           =   420
       End
@@ -1422,7 +1422,7 @@ Begin VB.Form panzerEarthPrefs
          Left            =   300
          MultiLine       =   -1  'True
          ScrollBars      =   2  'Vertical
-         TabIndex        =   133
+         TabIndex        =   128
          Text            =   "frmPrefs.frx":65DE
          Top             =   2205
          Width           =   8010
@@ -1441,7 +1441,7 @@ Begin VB.Form panzerEarthPrefs
          Height          =   360
          Left            =   6780
          Style           =   1  'Graphical
-         TabIndex        =   124
+         TabIndex        =   119
          ToolTipText     =   "This gives access to the debugging tool"
          Top             =   1110
          Width           =   1470
@@ -1460,7 +1460,7 @@ Begin VB.Form panzerEarthPrefs
          Height          =   360
          Left            =   6780
          Style           =   1  'Graphical
-         TabIndex        =   123
+         TabIndex        =   118
          ToolTipText     =   "This will link you to the Rocket/Steamy dock users Group"
          Top             =   735
          Width           =   1470
@@ -1479,7 +1479,7 @@ Begin VB.Form panzerEarthPrefs
          Height          =   360
          Left            =   6780
          Style           =   1  'Graphical
-         TabIndex        =   122
+         TabIndex        =   117
          ToolTipText     =   "Here you can visit the update location where you can download new versions of the programs."
          Top             =   360
          Width           =   1470
@@ -1498,7 +1498,7 @@ Begin VB.Form panzerEarthPrefs
          Height          =   360
          Left            =   6780
          Style           =   1  'Graphical
-         TabIndex        =   121
+         TabIndex        =   116
          ToolTipText     =   "Opens a browser window and sends you to our donate page on Amazon"
          Top             =   1485
          Width           =   1470
@@ -1517,7 +1517,7 @@ Begin VB.Form panzerEarthPrefs
          EndProperty
          Height          =   225
          Left            =   2940
-         TabIndex        =   138
+         TabIndex        =   133
          Top             =   510
          Width           =   495
       End
@@ -1535,7 +1535,7 @@ Begin VB.Form panzerEarthPrefs
          EndProperty
          Height          =   240
          Left            =   3450
-         TabIndex        =   137
+         TabIndex        =   132
          Top             =   510
          Width           =   525
       End
@@ -1553,7 +1553,7 @@ Begin VB.Form panzerEarthPrefs
          EndProperty
          Height          =   240
          Left            =   2730
-         TabIndex        =   136
+         TabIndex        =   131
          Top             =   510
          Width           =   225
       End
@@ -1571,7 +1571,7 @@ Begin VB.Form panzerEarthPrefs
          EndProperty
          Height          =   240
          Left            =   3090
-         TabIndex        =   135
+         TabIndex        =   130
          Top             =   510
          Width           =   225
       End
@@ -1588,7 +1588,7 @@ Begin VB.Form panzerEarthPrefs
          EndProperty
          Height          =   225
          Left            =   2715
-         TabIndex        =   132
+         TabIndex        =   127
          Top             =   855
          Width           =   2175
       End
@@ -1605,7 +1605,7 @@ Begin VB.Form panzerEarthPrefs
          EndProperty
          Height          =   225
          Left            =   1050
-         TabIndex        =   131
+         TabIndex        =   126
          Top             =   855
          Width           =   795
       End
@@ -1622,7 +1622,7 @@ Begin VB.Form panzerEarthPrefs
          EndProperty
          Height          =   225
          Left            =   1065
-         TabIndex        =   130
+         TabIndex        =   125
          Top             =   495
          Width           =   795
       End
@@ -1639,7 +1639,7 @@ Begin VB.Form panzerEarthPrefs
          EndProperty
          Height          =   225
          Left            =   2715
-         TabIndex        =   129
+         TabIndex        =   124
          Top             =   1215
          Width           =   2175
       End
@@ -1656,7 +1656,7 @@ Begin VB.Form panzerEarthPrefs
          EndProperty
          Height          =   225
          Left            =   1050
-         TabIndex        =   128
+         TabIndex        =   123
          Top             =   1215
          Width           =   1470
       End
@@ -1673,7 +1673,7 @@ Begin VB.Form panzerEarthPrefs
          EndProperty
          Height          =   225
          Left            =   1050
-         TabIndex        =   127
+         TabIndex        =   122
          Top             =   1560
          Width           =   1470
       End
@@ -1690,7 +1690,7 @@ Begin VB.Form panzerEarthPrefs
          EndProperty
          Height          =   225
          Left            =   2715
-         TabIndex        =   126
+         TabIndex        =   121
          Top             =   1560
          Width           =   3735
       End
@@ -1707,7 +1707,7 @@ Begin VB.Form panzerEarthPrefs
          EndProperty
          Height          =   225
          Left            =   3900
-         TabIndex        =   125
+         TabIndex        =   120
          Top             =   510
          Width           =   1245
       End
@@ -1716,7 +1716,7 @@ Begin VB.Form panzerEarthPrefs
       Caption         =   "All controls marked with a * take effect immediately."
       Height          =   300
       Left            =   1920
-      TabIndex        =   148
+      TabIndex        =   143
       Top             =   10155
       Width           =   3870
    End
@@ -2234,11 +2234,13 @@ Private Sub cmbDebug_Click()
 
     btnSave.Enabled = True ' enable the save button
     If cmbDebug.ListIndex = 0 Then
+        txtDefaultEditor.Text = "eg. E:\vb6\Panzer Earth gauge VB6\Panzer Earth Gauge.vbp"
         txtDefaultEditor.Enabled = False
         lblDebug(7).Enabled = False
         btnDefaultEditor.Enabled = False
         lblDebug(9).Enabled = False
     Else
+        txtDefaultEditor.Text = PzEDefaultEditor
         txtDefaultEditor.Enabled = True
         lblDebug(7).Enabled = True
         btnDefaultEditor.Enabled = True
@@ -3122,6 +3124,11 @@ Private Sub fraConfig_MouseMove(Button As Integer, Shift As Integer, X As Single
                   TTIconInfo, "Help on Configuration", , , , True
 
 End Sub
+
+Private Sub fraDefaultEditor_MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)
+    lblGitHub.ForeColor = &H80000012
+End Sub
+
 Private Sub fraDevelopment_MouseDown(Button As Integer, Shift As Integer, X As Single, Y As Single)
     If Button = 2 Then
         Me.PopupMenu prefsMnuPopmenu, vbPopupMenuRightButton
@@ -3256,7 +3263,7 @@ Private Sub lblGitHub_dblClick()
     
     answer = MsgBox("This option opens a browser window and take you straight to Github. Proceed?", vbExclamation + vbYesNo)
     If answer = vbYes Then
-       Call ShellExecute(Me.hwnd, "Open", "https://github.com/yereverluvinunclebert/Firecall-for-Windows", vbNullString, App.Path, 1)
+       Call ShellExecute(Me.hwnd, "Open", "https://github.com/yereverluvinunclebert/Panzer-Earth-gauge-VB6", vbNullString, App.Path, 1)
     End If
 End Sub
 
@@ -3704,7 +3711,7 @@ Private Sub picButtonMouseUpEvent(ByVal thisTabName As String, ByRef thisPicName
         
     ' under windows 10+ the internal window calcs are all wrong due to the bigger title bars
     If dynamicSizingFlg = False Then
-        padding = 250 ' add normal padding below the help button to position the bottom of the form
+        padding = 200 ' add normal padding below the help button to position the bottom of the form
 
         lastFormHeight = btnHelp.Top + btnHelp.Height + captionHeight + borderWidth + padding
         panzerEarthPrefs.Height = lastFormHeight
@@ -4441,7 +4448,7 @@ Private Sub setframeHeights()
         fraPosition.Height = 7440
         fraFonts.Height = 3615
         fraWindow.Height = 6300
-        fraDevelopment.Height = 5235
+        fraDevelopment.Height = 6191
         fraAbout.Height = 8580
     End If
 
