@@ -337,7 +337,7 @@ Begin VB.Form panzerEarthPrefs
          Top             =   435
          Width           =   6450
          Begin VB.CheckBox chkShowTaskbar 
-            Caption         =   "Show Widget in Taskbar *"
+            Caption         =   "Show Widget in Taskbar"
             Height          =   225
             Left            =   2010
             TabIndex        =   155
@@ -382,7 +382,7 @@ Begin VB.Form panzerEarthPrefs
             Width           =   3405
          End
          Begin VB.CheckBox chkEnableTooltips 
-            Caption         =   "Enable Tooltips on all Controls *"
+            Caption         =   "Enable Tooltips on all Controls"
             Height          =   225
             Left            =   2010
             TabIndex        =   35
@@ -3571,6 +3571,7 @@ Public Sub setPrefsTooltips()
         sliOpacity.ToolTipText = "Set the transparency of the program. Any change in opacity takes place instantly."
         cmbScrollWheelDirection.ToolTipText = "To change the direction of the mouse scroll wheel when resiziing the globe gauge."
         chkEnableBalloonTooltips.ToolTipText = "Check the box to enable larger balloon tooltips for all controls on the main program"
+        chkShowTaskbar.ToolTipText = "Check the box to show the widget in the taskbar"
         chkEnableTooltips.ToolTipText = "Check the box to enable tooltips for all controls on the main program"
         sliGaugeSize.ToolTipText = "Adjust to a percentage of the original size. Any adjustment in size takes place instantly (you can also use Ctrl+Mousewheel hovering over the globe itself)."
         'sliWidgetSkew.ToolTipText = "Adjust to a degree skew of the original position. Any adjustment in direction takes place instantly (you can also use the Mousewheel hovering over the globe itself."
@@ -3633,6 +3634,7 @@ Public Sub setPrefsTooltips()
         sliOpacity.ToolTipText = vbNullString
         cmbScrollWheelDirection.ToolTipText = vbNullString
         chkEnableBalloonTooltips.ToolTipText = vbNullString
+        chkShowTaskbar.ToolTipText = vbNullString
         chkEnableTooltips.ToolTipText = vbNullString
         sliGaugeSize.ToolTipText = vbNullString
         'sliWidgetSkew.ToolTipText = ""
@@ -3641,13 +3643,13 @@ Public Sub setPrefsTooltips()
         btnAboutDebugInfo.ToolTipText = vbNullString
         btnDonate.ToolTipText = vbNullString
         btnUpdate.ToolTipText = vbNullString
-        lblFontsTab(0).ToolTipText = ""
-        lblFontsTab(1).ToolTipText = ""
-        lblFontsTab(2).ToolTipText = ""
-        lblFontsTab(6).ToolTipText = ""
-        lblFontsTab(7).ToolTipText = ""
-        txtPrefsFontCurrentSize.ToolTipText = ""
-        lblCurrentFontsTab.ToolTipText = ""
+        lblFontsTab(0).ToolTipText = vbNullString
+        lblFontsTab(1).ToolTipText = vbNullString
+        lblFontsTab(2).ToolTipText = vbNullString
+        lblFontsTab(6).ToolTipText = vbNullString
+        lblFontsTab(7).ToolTipText = vbNullString
+        txtPrefsFontCurrentSize.ToolTipText = vbNullString
+        lblCurrentFontsTab.ToolTipText = vbNullString
     End If
 
    On Error GoTo 0
