@@ -374,30 +374,100 @@ Public oldPzESettingsModificationTime  As Date
 Public Const visibleAreaWidth As Long = 648 ' this is the width of the rightmost visible point of the widget - ie. the surround
 '------------------------------------------------------ ENDS
 
-
-
+ 
+Private Const OF_EXIST         As Long = &H4000
+Private Const OFS_MAXPATHNAME  As Long = 128
+Private Const HFILE_ERROR      As Long = -1
+ 
+Private Type OFSTRUCT
+    cBytes As Byte
+    fFixedDisk As Byte
+    nErrCode As Integer
+    Reserved1 As Integer
+    Reserved2 As Integer
+    szPathName(OFS_MAXPATHNAME) As Byte
+End Type
+     
+Private Declare Function OpenFile Lib "kernel32" (ByVal lpFileName As String, _
+                            lpReOpenBuff As OFSTRUCT, ByVal wStyle As Long) As Long
+Private Declare Function PathFileExists Lib "shlwapi" Alias "PathFileExistsA" (ByVal pszPath As String) As Long
+Private Declare Function PathIsDirectory Lib "shlwapi" Alias "PathIsDirectoryA" (ByVal pszPath As String) As Long
+                            
+     
 '---------------------------------------------------------------------------------------
 ' Procedure : fFExists
 ' Author    : beededea
-' Date      : 17/10/2019
+' Date      : 19/07/2023
 ' Purpose   :
 '---------------------------------------------------------------------------------------
 '
-Public Function fFExists(ByRef OrigFile As String) As Boolean
-    Dim FS As Object
-    On Error GoTo fFExists_Error
-   'If debugflg = 1  Then Debug.Print "%fFExists"
+Public Function fFExists(ByVal Fname As String) As Boolean
+ 
+    Dim lRetVal As Long
+    Dim OfSt As OFSTRUCT
+    
+   On Error GoTo fFExists_Error
 
-    Set FS = CreateObject("Scripting.FileSystemObject")
-    fFExists = FS.FileExists(OrigFile)
+    lRetVal = OpenFile(Fname, OfSt, OF_EXIST)
+    If lRetVal <> HFILE_ERROR Then
+        fFExists = True
+    Else
+        fFExists = False
+    End If
 
    On Error GoTo 0
    Exit Function
 
 fFExists_Error:
 
-    MsgBox "Error " & Err.Number & " (" & Err.Description & ") in procedure fFExists of module module1"
+    MsgBox "Error " & Err.Number & " (" & Err.Description & ") in procedure fFExists of Module Module1"
+    
 End Function
+
+
+
+'---------------------------------------------------------------------------------------
+' Procedure : fDirExists
+' Author    : beededea
+' Date      : 19/07/2023
+' Purpose   :
+'---------------------------------------------------------------------------------------
+'
+Public Function fDirExists(ByVal pstrFolder As String) As Boolean
+   On Error GoTo fDirExists_Error
+
+    fDirExists = (PathFileExists(pstrFolder) = 1)
+    If fDirExists Then fDirExists = (PathIsDirectory(pstrFolder) <> 0)
+
+   On Error GoTo 0
+   Exit Function
+
+fDirExists_Error:
+
+    MsgBox "Error " & Err.Number & " (" & Err.Description & ") in procedure fDirExists of Module Module1"
+End Function
+''---------------------------------------------------------------------------------------
+'' Procedure : fFExists
+'' Author    : beededea
+'' Date      : 17/10/2019
+'' Purpose   :
+''---------------------------------------------------------------------------------------
+''
+'Public Function fFExists(ByRef OrigFile As String) As Boolean
+'    Dim FS As Object
+'    On Error GoTo fFExists_Error
+'   'If debugflg = 1  Then Debug.Print "%fFExists"
+'
+'    Set FS = CreateObject("Scripting.FileSystemObject")
+'    fFExists = FS.FileExists(OrigFile)
+'
+'   On Error GoTo 0
+'   Exit Function
+'
+'fFExists_Error:
+'
+'    MsgBox "Error " & Err.Number & " (" & Err.Description & ") in procedure fFExists of module module1"
+'End Function
 
 
 '---------------------------------------------------------------------------------------
@@ -407,21 +477,21 @@ End Function
 ' Purpose   :
 '---------------------------------------------------------------------------------------
 '
-Public Function fDirExists(ByRef OrigFile As String) As Boolean
-    Dim FS As Object
-    On Error GoTo fDirExists_Error
-   '''If debugflg = 1  Then msgBox "%fDirExists"
-
-    Set FS = CreateObject("Scripting.FileSystemObject")
-    fDirExists = FS.FolderExists(OrigFile)
-
-   On Error GoTo 0
-   Exit Function
-
-fDirExists_Error:
-
-    MsgBox "Error " & Err.Number & " (" & Err.Description & ") in procedure fDirExists of module module1"
-End Function
+'Public Function fDirExists(ByRef OrigFile As String) As Boolean
+'    Dim FS As Object
+'    On Error GoTo fDirExists_Error
+'   '''If debugflg = 1  Then msgBox "%fDirExists"
+'
+'    Set FS = CreateObject("Scripting.FileSystemObject")
+'    fDirExists = FS.FolderExists(OrigFile)
+'
+'   On Error GoTo 0
+'   Exit Function
+'
+'fDirExists_Error:
+'
+'    MsgBox "Error " & Err.Number & " (" & Err.Description & ") in procedure fDirExists of module module1"
+'End Function
 
 
 
