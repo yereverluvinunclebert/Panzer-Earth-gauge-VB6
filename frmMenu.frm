@@ -115,7 +115,7 @@ Private Sub Form_Load()
     Me.Width = 1  ' the menu form is made as small as possible and moved off screen so that it does not show anywhere on the
     Me.Height = 1 ' screen, the menu appearing at the cursor point when it is told to do so by the dock form mousedown.
     'Me.ControlBox = False ' design time properties set in the IDE
-    'Me.ShowInTaskbar = False ' set in the IDE
+    'Me.ShowInTaskbar = False ' set in the IDE ' NOTE: is possible in RC forms at runtime
     'Me.MaxButton = False ' set in the IDE
     'Me.MinButton = False ' set in the IDE
     Me.Visible = False

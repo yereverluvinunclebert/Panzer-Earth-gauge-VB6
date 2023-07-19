@@ -262,6 +262,9 @@
 
 ' create good landing pages for each link in the sub menu - done
 
+' added link to github on the development prefs - done
+' debug OFF on the dev prefs now shows an example vbp location - done
+
 ' test on win 7 32bit - study 2nd PC - wip 
 ' test on win 10 64bit - study 1st  PC - wip 
 

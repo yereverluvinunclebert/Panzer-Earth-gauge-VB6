@@ -344,6 +344,8 @@ Private Sub initialiseGlobalVars()
     ' config
     PzEEnableTooltips = vbNullString
     PzEEnableBalloonTooltips = vbNullString
+    PzEShowTaskbar = vbNullString
+    
     PzEGaugeSize = vbNullString
     PzEScrollWheelDirection = vbNullString
     
@@ -518,7 +520,13 @@ Public Sub adjustMainControls()
         menuForm.mnuLockWidget.Checked = True
         globeWidget.Locked = True ' this is just here for continuity's sake, it is also set at the time the control is selected
     End If
-                
+    
+    If PzEShowTaskbar = "0" Then
+        fMain.globeForm.ShowInTaskbar = False
+    Else
+        fMain.globeForm.ShowInTaskbar = True
+    End If
+                 
     ' set the z-ordering of the window
     Call setWindowZordering
     
@@ -586,6 +594,8 @@ Public Sub readSettingsFile(ByVal location As String, ByVal PzESettingsFile As S
         ' configuration
         PzEEnableTooltips = fGetINISetting(location, "enableTooltips", PzESettingsFile)
         PzEEnableBalloonTooltips = fGetINISetting(location, "enableBalloonTooltips", PzESettingsFile)
+        PzEShowTaskbar = fGetINISetting(location, "showTaskbar", PzESettingsFile)
+        
         PzEGaugeSize = fGetINISetting(location, "gaugeSize", PzESettingsFile)
         PzEScrollWheelDirection = fGetINISetting(location, "scrollWheelDirection", PzESettingsFile)
         'PzEWidgetSkew = fGetINISetting(location, "widgetSkew", PzESettingsFile)
@@ -669,6 +679,8 @@ Public Sub validateInputs()
         ' Config
         If PzEEnableTooltips = vbNullString Then PzEEnableTooltips = "1"
         If PzEEnableBalloonTooltips = vbNullString Then PzEEnableBalloonTooltips = "1"
+        If PzEShowTaskbar = vbNullString Then PzEShowTaskbar = "0"
+        
         If PzEGaugeSize = vbNullString Then PzEGaugeSize = "25"
         If PzEScrollWheelDirection = vbNullString Then PzEScrollWheelDirection = "up"
                

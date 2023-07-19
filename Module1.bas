@@ -289,6 +289,8 @@ Public PzEAnimationInterval As String
 ' config
 Public PzEEnableTooltips As String
 Public PzEEnableBalloonTooltips As String
+Public PzEShowTaskbar As String
+
 Public PzEGaugeSize As String
 Public PzEScrollWheelDirection As String
 
