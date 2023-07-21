@@ -539,7 +539,7 @@ End Sub
 ' Purpose   :
 '---------------------------------------------------------------------------------------
 '
-Private Sub W_MouseDown(Button As Integer, Shift As Integer, ByVal X As Single, ByVal Y As Single)
+Private Sub W_MouseDown(Button As Integer, Shift As Integer, ByVal x As Single, ByVal y As Single)
    On Error GoTo W_MouseDown_Error
 
     If Button = vbRightButton Then
@@ -576,6 +576,9 @@ W_Paint_Error:
 
     MsgBox "Error " & Err.Number & " (" & Err.Description & ") in procedure W_Paint of Class Module cwGlobe"
 End Sub
+
+
+
 '---------------------------------------------------------------------------------------
 ' Procedure : Draw
 ' Author    :
@@ -586,10 +589,10 @@ End Sub
 Public Sub Draw(ByVal CC As cCairoContext, ByVal dx_Aligned As Single, ByVal dy_Aligned As Single, ByVal mOpacity As Double)
     
    On Error GoTo Draw_Error
-    
+          
     CC.TranslateDrawings 0, 0  ' dx / 2, dy / 2
     CC.ScaleDrawings mZoom, mZoom
-    
+
     CC.Save
    
     CC.RenderSurfaceContent "Ring", ringxo, ringyo, , , , mOpacity
@@ -607,6 +610,7 @@ Public Sub Draw(ByVal CC As cCairoContext, ByVal dx_Aligned As Single, ByVal dy_
     CC.RenderSurfaceContent "bigReflection", bigReflectionxo, bigReflectionyo, , , , mOpacity
     CC.RenderSurfaceContent "windowReflection", windowReflectionxo, windowReflectionyo, , , , mOpacity
     CC.RenderSurfaceContent "Glow", 25, 33, 555, 555, , mOpacity
+
 
    On Error GoTo 0
    Exit Sub

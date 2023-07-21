@@ -374,7 +374,7 @@ Public oldPzESettingsModificationTime  As Date
 Public Const visibleAreaWidth As Long = 648 ' this is the width of the rightmost visible point of the widget - ie. the surround
 '------------------------------------------------------ ENDS
 
- 
+'------------------------------------------------------ STARTS
 Private Const OF_EXIST         As Long = &H4000
 Private Const OFS_MAXPATHNAME  As Long = 128
 Private Const HFILE_ERROR      As Long = -1
@@ -392,11 +392,13 @@ Private Declare Function OpenFile Lib "kernel32" (ByVal lpFileName As String, _
                             lpReOpenBuff As OFSTRUCT, ByVal wStyle As Long) As Long
 Private Declare Function PathFileExists Lib "shlwapi" Alias "PathFileExistsA" (ByVal pszPath As String) As Long
 Private Declare Function PathIsDirectory Lib "shlwapi" Alias "PathIsDirectoryA" (ByVal pszPath As String) As Long
+
+'------------------------------------------------------ ENDS
                             
      
 '---------------------------------------------------------------------------------------
 ' Procedure : fFExists
-' Author    : beededea
+' Author    : RobDog888 https://www.vbforums.com/member.php?17511-RobDog888
 ' Date      : 19/07/2023
 ' Purpose   :
 '---------------------------------------------------------------------------------------
@@ -406,8 +408,8 @@ Public Function fFExists(ByVal Fname As String) As Boolean
     Dim lRetVal As Long
     Dim OfSt As OFSTRUCT
     
-   On Error GoTo fFExists_Error
-
+    On Error GoTo fFExists_Error
+    
     lRetVal = OpenFile(Fname, OfSt, OF_EXIST)
     If lRetVal <> HFILE_ERROR Then
         fFExists = True
@@ -428,7 +430,7 @@ End Function
 
 '---------------------------------------------------------------------------------------
 ' Procedure : fDirExists
-' Author    : beededea
+' Author    : zeezee https://www.vbforums.com/member.php?90054-zeezee
 ' Date      : 19/07/2023
 ' Purpose   :
 '---------------------------------------------------------------------------------------
