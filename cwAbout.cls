@@ -31,6 +31,10 @@ Private mShow As Boolean
 Private aboutxo As Integer
 Private aboutyo As Integer
 
+'property opacity
+'property show
+
+
 '---------------------------------------------------------------------------------------
 ' Procedure : Class_Initialize
 ' Author    : beededea

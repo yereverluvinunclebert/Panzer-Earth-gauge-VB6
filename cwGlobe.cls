@@ -20,14 +20,7 @@ Attribute VB_Exposed = False
 
 Option Explicit
  
-Private mRotationSpeed As Double
-Private mZoom As Double
-Private mZoomDirection As String
-Private mRotating As Boolean
-Private mLocked As Boolean
-Private mHidden As Boolean
-Private mOpacity As Double
-Private mWasRotating As Boolean
+
 
 Private ringxo As Integer
 Private ringyo As Integer
@@ -59,6 +52,24 @@ Private WithEvents W As cWidgetBase
 Attribute W.VB_VarHelpID = -1
 Private WithEvents tmrRotate As cTimer
 Attribute tmrRotate.VB_VarHelpID = -1
+
+Private mRotationSpeed As Double
+Private mZoom As Double
+Private mZoomDirection As String
+Private mRotating As Boolean
+Private mLocked As Boolean
+Private mHidden As Boolean
+Private mOpacity As Double
+Private mWasRotating As Boolean
+
+' property mRotationSpeed
+' property mZoom
+' property mZoomDirection
+' property mRotating
+' property mLocked
+' property mHidden
+' property mOpacity
+' property mWasRotating
  
 '---------------------------------------------------------------------------------------
 ' Procedure : Class_Initialize
@@ -539,7 +550,7 @@ End Sub
 ' Purpose   :
 '---------------------------------------------------------------------------------------
 '
-Private Sub W_MouseDown(Button As Integer, Shift As Integer, ByVal x As Single, ByVal y As Single)
+Private Sub W_MouseDown(Button As Integer, Shift As Integer, ByVal X As Single, ByVal Y As Single)
    On Error GoTo W_MouseDown_Error
 
     If Button = vbRightButton Then

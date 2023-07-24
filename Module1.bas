@@ -1698,14 +1698,17 @@ End Sub
     'f5 18
 '---------------------------------------------------------------------------------------
 '
-Public Sub getKeyPress(ByVal KeyCode As Integer)
-    'Dim a As Integer
+Public Sub getKeyPress(ByVal KeyCode As Integer, ByVal shift As Integer)
 
     On Error GoTo getkeypress_Error
 
     If CTRL_1 Or SHIFT_1 Then
             CTRL_1 = False
             SHIFT_1 = False
+    End If
+    
+    If shift Then
+        SHIFT_1 = True
     End If
 
     Select Case KeyCode

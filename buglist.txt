@@ -270,7 +270,7 @@
 ' swapped the acripting.fileSystemObject code from fFileExists for PathIsDirectoryAPI avoiding Wine error - done
 
 ' test on win 7 32bit - study 2nd PC - wip 
-' test on win 10 64bit - study 1st  PC - wip 
+' test on win 10 64bit - study 1st  PC - wip
 
 ' -oOo-
 
@@ -280,17 +280,21 @@
 ' test on win XP 32bit blank install, no RC5 at all
 ' test on ReactOS 32bit blank install, no RC5 at all
 
+' document showInTaskbar new option
+
 ' build new CHM containing valid links
 ' build new setup.exe containing valid links
 
-' upload the code (no setup.exe) to the VBforums codebank
-
 ' add a debug form and debug commands
+
+' get current monitor? Add code to position the various forms on multiple monitors.
 
 ' -oOo-
 
 ' Tasks yet to do in later versions.
 ' ==================================
+
+' upload the code (no setup.exe) to the VBforums codebank
 
 ' lightquick - resurrect
 
@@ -298,13 +302,8 @@
 
 ' softpedia
 
-' get current monitor? Add code to position the various forms on multiple monitors.
-
-' add pin widget layer as a trial with a function, change of image and a sound, skew and size properties that match the globe
+' add pin 'widget' layer as a trial with a function, change of image and a sound, size, opacity properties that match the globe
 ' add logic to each of the graphic controls - WIP
-
-' create new control 'widgets' that can respond to user input.
-' ensure they resize/become opaque as per main.
 
 ' Problems Widget layers:
 
@@ -343,6 +342,6 @@
 ' To overcome this limitation I would have to create a RC widget class for 
 ' each item that needs to respond to user interaction. Each would be a virtual 
 ' rectangle acting as if it was actually opaque. The rectangles cannot overlap.
-' it might be worth doing for one or two controls but for a Ywidget equivalent 
+' it might be worth doing for one or two controls but for a Ywidget equivalent
 ' with multiple interacting regions it is completely unsuitable.
 

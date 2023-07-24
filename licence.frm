@@ -120,7 +120,7 @@ Private Sub declineLabel_Click()
 
     Call globeForm_Unload
     
-    sPutINISetting "Software\PzEarth", "Licence", slicence, toolSettingsFile
+    sPutINISetting "Software\PzEarth", "Licence", slicence, PzESettingsFile
     End
 
    On Error GoTo 0
@@ -154,7 +154,7 @@ Private Sub Label2_Click()
     frmLicence.Hide
     slicence = "1"
     
-    sPutINISetting "Software\PzEarth", "Licence", slicence, toolSettingsFile
+    sPutINISetting "Software\PzEarth", "Licence", slicence, PzESettingsFile
 
    On Error GoTo 0
    Exit Sub

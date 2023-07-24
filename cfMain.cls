@@ -33,7 +33,7 @@ Attribute globeForm.VB_VarHelpID = -1
 ' Purpose   :
 '---------------------------------------------------------------------------------------
 '
-Public Sub InitAndShowAsFreeForm(ByVal x As Long, ByVal y As Long, Optional ByVal dx As Long, Optional ByVal dy As Long, Optional ByVal Caption As String)
+Public Sub InitAndShowAsFreeForm(ByVal X As Long, ByVal Y As Long, Optional ByVal dx As Long, Optional ByVal dy As Long, Optional ByVal Caption As String)
     
     Const WFFStyleTool As Integer = 7 ' additional styles above the normal five  WFFStyleTool = 7 makes the taskbar button go away
     
@@ -51,7 +51,7 @@ Public Sub InitAndShowAsFreeForm(ByVal x As Long, ByVal y As Long, Optional ByVa
     ' I do not 'get' the size/position relationship between the form and the widget on the form. Seems peculiar to me.
       
     'NOTE that when you move a widget by dragging, you are moving the invisible form it is drawn upon.
-    globeForm.Move x, y ' position the form & display it
+    globeForm.Move X, Y ' position the form & display it
     globeForm.Load
     
     ' set the z-ordering of the main form
@@ -119,7 +119,7 @@ End Sub
 ' Purpose   :
 '---------------------------------------------------------------------------------------
 '
-Private Sub globeForm_MouseMove(Button As Integer, Shift As Integer, x As Single, y As Single)
+Private Sub globeForm_MouseMove(Button As Integer, shift As Integer, X As Single, Y As Single)
     On Error GoTo globeForm_MouseMove_Error
 
     If globeWidget.Locked = True Then Exit Sub
@@ -127,7 +127,7 @@ Private Sub globeForm_MouseMove(Button As Integer, Shift As Integer, x As Single
     
     Static x0 As Single
     Static y0 As Single
-    If Button Then globeForm.Move globeForm.Left + x - x0, globeForm.Top + y - y0 Else x0 = x: y0 = y
+    If Button Then globeForm.Move globeForm.Left + X - x0, globeForm.Top + Y - y0 Else x0 = X: y0 = Y
 
     On Error GoTo 0
     Exit Sub
@@ -148,10 +148,10 @@ End Sub
 ' Purpose   : get F5 and SHIFT keypresses
 '---------------------------------------------------------------------------------------
 '
-Private Sub globeForm_KeyDown(ByRef KeyCode As Integer, ByRef Shift As Integer)
+Private Sub globeForm_KeyDown(ByRef KeyCode As Integer, ByRef shift As Integer)
     On Error GoTo globeForm_KeyDown_Error
 
-    Call getKeyPress(KeyCode)
+    Call getKeyPress(KeyCode, shift)
 
     On Error GoTo 0
     Exit Sub
@@ -168,7 +168,7 @@ End Sub
 ' Purpose   : save the form x,y position when ever the globe/form is dragged
 '---------------------------------------------------------------------------------------
 '
-Private Sub globeForm_MouseUp(Button As Integer, Shift As Integer, x As Single, y As Single)
+Private Sub globeForm_MouseUp(Button As Integer, shift As Integer, X As Single, Y As Single)
     On Error GoTo globeForm_MouseUp_Error
     
     If globeWidget.Locked = True Then Exit Sub
