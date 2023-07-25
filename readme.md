@@ -25,12 +25,16 @@ ready to use on a production system - use at your own risk.
 This version was developed on Windows 7 using 32 bit VisualBasic 6 as a FOSS 
 project creating a WoW64 widget for the desktop. 
 
+![about](https://github.com/yereverluvinunclebert/Panzer-Earth-gauge-VB6/assets/2788342/fad0c42a-185e-4dbe-a977-35b9fb24c4a9)
+
 It is open source to allow easy configuration, bug-fixing, enhancement and 
 community contribution towards free-and-useful VB6 utilities that can be created
 by anyone. The first step was the creation of this template program to form the 
 basis for the conversion of other desktop utilities or widgets. A future step 
 is new VB6 widgets with more functionality and then hopefully, conversion of 
 each to RADBasic/TwinBasic for future-proofing and 64bit-ness. 
+
+![panzer-earth-gauge-help-750](https://github.com/yereverluvinunclebert/Panzer-Earth-gauge-VB6/assets/2788342/38756a92-9133-4e29-aa1f-9a8f3557b97b)
 
 This utility is one of a set of steampunk and dieselpunk widgets. That you can 
 find here on Deviantart: https://www.deviantart.com/yereverluvinuncleber/gallery
