@@ -156,3 +156,5 @@ With regard to the commercial use of incorporated images, permission and a
 licence would need to be obtained from the original owner and creator, ie. me.
 
 ![YXheYmD1000](https://github.com/yereverluvinunclebert/Panzer-Earth-gauge-VB6/assets/2788342/8f3a1675-fa56-4532-88f0-743a711d3563)
+
+Showing the VB6 program running on OpenSuse Linux with Wine.
