@@ -110,7 +110,7 @@ BeforeUninstall=,,,1,2,1,
 [CREATE_SETUP]
 OutputFolder=E:\vb6\Panzer Earth gauge VB6 ver. 0.1.0
 SetupFilename=Setup.exe
-SetupIconPathname=E:\vb6\Panzer Earth gauge VB6\Resources\images\32x32 16 colours.ico
+SetupIconPathname=E:\vb6\Panzer Earth gauge VB6 ver. 0.1.0\Resources\images\32x32 16 colours.ico
 CreateSelfExtractedSetup=Yes
 CreatePasswordProtectedSetup=No
 Password=

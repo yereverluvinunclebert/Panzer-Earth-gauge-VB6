@@ -1698,7 +1698,7 @@ End Sub
     'f5 18
 '---------------------------------------------------------------------------------------
 '
-Public Sub getKeyPress(ByVal KeyCode As Integer, ByVal shift As Integer)
+Public Sub getKeyPress(ByVal KeyCode As Integer, ByVal Shift As Integer)
 
     On Error GoTo getkeypress_Error
 
@@ -1707,7 +1707,7 @@ Public Sub getKeyPress(ByVal KeyCode As Integer, ByVal shift As Integer)
             SHIFT_1 = False
     End If
     
-    If shift Then
+    If Shift Then
         SHIFT_1 = True
     End If
 
@@ -1857,7 +1857,7 @@ Public Sub globeForm_Unload() ' name follows VB6 standard naming convention
     sPutINISetting "Software\PzEarth", "maximiseFormX", PzEMaximiseFormX, PzESettingsFile
     sPutINISetting "Software\PzEarth", "maximiseFormY", PzEMaximiseFormY, PzESettingsFile
     
-    Call unloadAllForms
+    Call unloadAllForms(True)
 
     On Error GoTo 0
     Exit Sub
@@ -1879,7 +1879,7 @@ End Sub
 ' Purpose   : unload all VB6 and RC5 forms
 '---------------------------------------------------------------------------------------
 '
-Public Sub unloadAllForms()
+Public Sub unloadAllForms(ByVal endItAll As Boolean)
     
    On Error GoTo unloadAllForms_Error
 
@@ -1909,6 +1909,8 @@ Public Sub unloadAllForms()
     Set frmTimer = Nothing
     Set menuForm = Nothing
 
+    If endItAll = True Then End
+    
    On Error GoTo 0
    Exit Sub
 
@@ -1929,7 +1931,7 @@ Public Sub reloadWidget()
     
     On Error GoTo reloadWidget_Error
     
-    Call unloadAllForms
+    Call unloadAllForms(False) ' unload forms but do not END
     
     ' this will call the routines as called by sub main() and initialise the program and RELOAD the RC5 forms.
     Call mainRoutine(True) ' sets the restart flag to avoid repriming the Rc5 message pump.
