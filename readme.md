@@ -39,6 +39,8 @@ each to RADBasic/TwinBasic for future-proofing and 64bit-ness.
 This utility is one of a set of steampunk and dieselpunk widgets. That you can 
 find here on Deviantart: https://www.deviantart.com/yereverluvinuncleber/gallery
 
+![prefs-position](https://github.com/yereverluvinunclebert/Panzer-Earth-gauge-VB6/assets/2788342/2cc2f8ea-a277-4447-8079-53fdaea5b13d)
+
 I do hope you enjoy using this utility and others. Your own software 
 enhancements and contributions will be gratefully received if you choose to 
 contribute.
