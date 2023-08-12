@@ -1973,8 +1973,10 @@ Public Sub makeProgramPreferencesAvailable()
         
             Call readPrefsPosition
             
-            If ((fMain.globeForm.Left + fMain.globeForm.Width) * screenTwipsPerPixelX) + 200 + panzerEarthPrefs.Width > screenWidthTwips Then
-                panzerEarthPrefs.Left = (fMain.globeForm.Left * screenTwipsPerPixelX) - (panzerEarthPrefs.Width + 200)
+            If panzerEarthPrefs.Left = 0 Then
+                If ((fMain.globeForm.Left + fMain.globeForm.Width) * screenTwipsPerPixelX) + 200 + panzerEarthPrefs.Width > screenWidthTwips Then
+                    panzerEarthPrefs.Left = (fMain.globeForm.Left * screenTwipsPerPixelX) - (panzerEarthPrefs.Width + 200)
+                End If
             End If
             
             If panzerEarthPrefs.Left < 0 Then panzerEarthPrefs.Left = 0
@@ -2041,8 +2043,8 @@ Public Sub writePrefsPosition()
    On Error GoTo writePrefsPosition_Error
 
     If panzerEarthPrefs.WindowState = vbNormal Then ' when vbMinimised the value = -48000  !
-        PzEFormXPosTwips = Str$(panzerEarthPrefs.Left)
-        PzEFormYPosTwips = Str$(panzerEarthPrefs.Top)
+        PzEFormXPosTwips = LTrim$(Str$(panzerEarthPrefs.Left))
+        PzEFormYPosTwips = LTrim$(Str$(panzerEarthPrefs.Top))
         
         ' now write those params to the toolSettings.ini
         sPutINISetting "Software\PzEarth", "formXPos", PzEFormXPosTwips, PzESettingsFile
