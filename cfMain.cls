@@ -82,15 +82,31 @@ End Sub
 '---------------------------------------------------------------------------------------
 '
 Public Sub globeForm_DblClick()
-  
+    Dim userprof As String: userprof = vbNullString
+    Dim thisCommand As String: thisCommand = vbNullString
+    
     On Error GoTo globeForm_DblClick_Error
 
     If LTrim$(PzEDblClickCommand) = vbNullString Then Exit Sub
+    
+    thisCommand = PzEDblClickCommand
+        
+    If InStr(thisCommand, "%userprofile%") Then
+        userprof = Environ$("USERPROFILE")
+        thisCommand = Replace(thisCommand, "%userprofile%", userprof)
+    End If
+    
+    ' .91 DAEB 08/12/2022 frmMain.frm SteamyDock responds to %systemroot% environment variables during runCommand
+    If InStr(thisCommand, "%systemroot%") Then
+        userprof = Environ$("SYSTEMROOT")
+        thisCommand = Replace(thisCommand, "%systemroot%", userprof)
+    End If
+    
     If SHIFT_1 = True Then
         SHIFT_1 = False
         Call ShellExecute(fMain.globeForm.hwnd, "Open", PzEOpenFile, vbNullString, App.Path, 1)
     Else
-        Call ShellExecute(fMain.globeForm.hwnd, "Open", PzEDblClickCommand, vbNullString, App.Path, 1)
+        Call ShellExecute(fMain.globeForm.hwnd, "runas", thisCommand, vbNullString, App.Path, 1)
     End If
 
     On Error GoTo 0
@@ -119,7 +135,7 @@ End Sub
 ' Purpose   :
 '---------------------------------------------------------------------------------------
 '
-Private Sub globeForm_MouseMove(Button As Integer, shift As Integer, X As Single, Y As Single)
+Private Sub globeForm_MouseMove(Button As Integer, Shift As Integer, X As Single, Y As Single)
     On Error GoTo globeForm_MouseMove_Error
 
     If globeWidget.Locked = True Then Exit Sub
@@ -148,10 +164,10 @@ End Sub
 ' Purpose   : get F5 and SHIFT keypresses
 '---------------------------------------------------------------------------------------
 '
-Private Sub globeForm_KeyDown(ByRef KeyCode As Integer, ByRef shift As Integer)
+Private Sub globeForm_KeyDown(ByRef KeyCode As Integer, ByRef Shift As Integer)
     On Error GoTo globeForm_KeyDown_Error
 
-    Call getKeyPress(KeyCode, shift)
+    Call getKeyPress(KeyCode, Shift)
 
     On Error GoTo 0
     Exit Sub
@@ -168,7 +184,7 @@ End Sub
 ' Purpose   : save the form x,y position when ever the globe/form is dragged
 '---------------------------------------------------------------------------------------
 '
-Private Sub globeForm_MouseUp(Button As Integer, shift As Integer, X As Single, Y As Single)
+Private Sub globeForm_MouseUp(Button As Integer, Shift As Integer, X As Single, Y As Single)
     On Error GoTo globeForm_MouseUp_Error
     
     If globeWidget.Locked = True Then Exit Sub

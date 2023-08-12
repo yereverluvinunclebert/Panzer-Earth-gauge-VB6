@@ -516,7 +516,7 @@ End Sub
 ' Procedure : W_MouseWheel
 ' Author    : beededea
 ' Date      : 09/05/2023
-' Purpose   :
+' Purpose   : uses ScaleDrawings mZoom, mZoom
 '---------------------------------------------------------------------------------------
 '
 Private Sub W_MouseWheel(ByVal MouseKeys As Long, ByVal Rotation As Long, ByVal LineOffset As Long, ByVal xAbs As Single, ByVal yAbs As Single)
