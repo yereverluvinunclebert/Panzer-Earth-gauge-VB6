@@ -14,6 +14,162 @@ Begin VB.Form panzerEarthPrefs
    ScaleWidth      =   8970
    StartUpPosition =   3  'Windows Default
    Visible         =   0   'False
+   Begin VB.Frame fraWindow 
+      Caption         =   "Window"
+      Height          =   6300
+      Left            =   405
+      TabIndex        =   10
+      Top             =   1515
+      Width           =   8280
+      Begin VB.Frame fraWindowInner 
+         BorderStyle     =   0  'None
+         Height          =   5775
+         Left            =   1095
+         TabIndex        =   14
+         Top             =   345
+         Width           =   5715
+         Begin VB.Frame fraHiding 
+            BorderStyle     =   0  'None
+            Height          =   2010
+            Left            =   480
+            TabIndex        =   135
+            Top             =   2325
+            Width           =   5130
+            Begin VB.ComboBox cmbHidingTime 
+               Height          =   315
+               Left            =   825
+               Style           =   2  'Dropdown List
+               TabIndex        =   138
+               Top             =   1680
+               Width           =   3720
+            End
+            Begin VB.CheckBox chkWidgetHidden 
+               Caption         =   "Hiding Widget *"
+               Height          =   225
+               Left            =   855
+               TabIndex        =   136
+               Top             =   225
+               Width           =   2955
+            End
+            Begin VB.Label lblWindowLevel 
+               Caption         =   "Hiding :"
+               Height          =   345
+               Index           =   2
+               Left            =   90
+               TabIndex        =   139
+               Top             =   210
+               Width           =   720
+            End
+            Begin VB.Label lblWindowLevel 
+               Caption         =   $"frmPrefs.frx":10CA
+               Height          =   975
+               Index           =   1
+               Left            =   855
+               TabIndex        =   137
+               Top             =   600
+               Width           =   3900
+            End
+         End
+         Begin VB.ComboBox cmbWindowLevel 
+            Height          =   315
+            Left            =   1305
+            Style           =   2  'Dropdown List
+            TabIndex        =   17
+            ToolTipText     =   $"frmPrefs.frx":116D
+            Top             =   0
+            Width           =   3720
+         End
+         Begin VB.CheckBox chkIgnoreMouse 
+            Caption         =   "Ignore Mouse *"
+            Height          =   225
+            Left            =   1335
+            TabIndex        =   15
+            ToolTipText     =   "Checking this box causes the program to ignore all mouse events."
+            Top             =   1500
+            Width           =   2535
+         End
+         Begin vb6projectCCRSlider.Slider sliOpacity 
+            Height          =   390
+            Left            =   1200
+            TabIndex        =   16
+            ToolTipText     =   "Set the transparency of the Program."
+            Top             =   4560
+            Width           =   3870
+            _ExtentX        =   6826
+            _ExtentY        =   688
+            Min             =   20
+            Max             =   100
+            Value           =   100
+            TickFrequency   =   6
+            SelStart        =   20
+         End
+         Begin VB.Label Label3 
+            Caption         =   "This setting controls the relative layering of this widget. You may use it to place it on top of other windows or underneath. "
+            Height          =   660
+            Left            =   1320
+            TabIndex        =   144
+            Top             =   570
+            Width           =   3810
+         End
+         Begin VB.Label lblWindowLevel 
+            Caption         =   "Window Level :"
+            Height          =   345
+            Index           =   0
+            Left            =   0
+            TabIndex        =   24
+            Top             =   60
+            Width           =   1740
+         End
+         Begin VB.Label lblOpacity20 
+            Caption         =   "20%"
+            Height          =   315
+            Left            =   1290
+            TabIndex        =   23
+            Top             =   5070
+            Width           =   345
+         End
+         Begin VB.Label lblOpacityLabel100 
+            Caption         =   "100%"
+            Height          =   315
+            Left            =   4650
+            TabIndex        =   22
+            Top             =   5070
+            Width           =   405
+         End
+         Begin VB.Label lblOpacityText 
+            Caption         =   "Opacity"
+            Height          =   315
+            Left            =   2775
+            TabIndex        =   21
+            Top             =   5070
+            Width           =   840
+         End
+         Begin VB.Label lblOpacityLabel 
+            Caption         =   "Opacity:"
+            Height          =   315
+            Left            =   555
+            TabIndex        =   20
+            Top             =   4620
+            Width           =   780
+         End
+         Begin VB.Label lblOpacityLabelDesc 
+            Caption         =   "Set the program transparency level. *"
+            Height          =   330
+            Left            =   1335
+            TabIndex        =   19
+            Top             =   5385
+            Width           =   3810
+         End
+         Begin VB.Label lblIgnoreMouseText 
+            Caption         =   "Checking this box causes the program to ignore all mouse events except right click menu interactions."
+            Height          =   660
+            Left            =   1320
+            TabIndex        =   18
+            Top             =   1890
+            Width           =   3810
+         End
+      End
+   End
    Begin VB.Frame fraDevelopment 
       Caption         =   "Development"
       Height          =   6570
@@ -51,12 +207,12 @@ Begin VB.Form panzerEarthPrefs
                Left            =   1440
                TabIndex        =   150
                Text            =   " eg. E:\vb6\fire call\FireCallWin.vbp"
-               ToolTipText     =   $"frmPrefs.frx":10CA
+               ToolTipText     =   $"frmPrefs.frx":11FA
                Top             =   195
                Width           =   3660
             End
             Begin VB.Label lblDebug 
-               Caption         =   $"frmPrefs.frx":115C
+               Caption         =   $"frmPrefs.frx":128C
                Height          =   930
                Index           =   9
                Left            =   1545
@@ -75,7 +231,7 @@ Begin VB.Form panzerEarthPrefs
                Width           =   1350
             End
             Begin VB.Label lblGitHub 
-               Caption         =   $"frmPrefs.frx":1200
+               Caption         =   $"frmPrefs.frx":1330
                ForeColor       =   &H8000000D&
                Height          =   885
                Left            =   1530
@@ -113,9 +269,9 @@ Begin VB.Form panzerEarthPrefs
          End
          Begin VB.ComboBox cmbDebug 
             Height          =   315
-            ItemData        =   "frmPrefs.frx":1295
+            ItemData        =   "frmPrefs.frx":13C5
             Left            =   1530
-            List            =   "frmPrefs.frx":1297
+            List            =   "frmPrefs.frx":13C7
             Style           =   2  'Dropdown List
             TabIndex        =   56
             ToolTipText     =   "Choose to set debug mode."
@@ -254,9 +410,9 @@ Begin VB.Form panzerEarthPrefs
          End
          Begin VB.ComboBox cmbScrollWheelDirection 
             Height          =   315
-            ItemData        =   "frmPrefs.frx":1299
+            ItemData        =   "frmPrefs.frx":13C9
             Left            =   1995
-            List            =   "frmPrefs.frx":129B
+            List            =   "frmPrefs.frx":13CB
             Style           =   2  'Dropdown List
             TabIndex        =   90
             ToolTipText     =   "To change the direction of the mouse scroll wheel when resiziing the globe gauge."
@@ -403,162 +559,6 @@ Begin VB.Form panzerEarthPrefs
             TabIndex        =   85
             Top             =   555
             Width           =   345
-         End
-      End
-   End
-   Begin VB.Frame fraWindow 
-      Caption         =   "Window"
-      Height          =   6300
-      Left            =   405
-      TabIndex        =   10
-      Top             =   1515
-      Width           =   8280
-      Begin VB.Frame fraWindowInner 
-         BorderStyle     =   0  'None
-         Height          =   5775
-         Left            =   1095
-         TabIndex        =   14
-         Top             =   345
-         Width           =   5715
-         Begin VB.Frame fraHiding 
-            BorderStyle     =   0  'None
-            Height          =   2010
-            Left            =   480
-            TabIndex        =   135
-            Top             =   2325
-            Width           =   5130
-            Begin VB.ComboBox cmbHidingTime 
-               Height          =   315
-               Left            =   825
-               Style           =   2  'Dropdown List
-               TabIndex        =   138
-               Top             =   1680
-               Width           =   3720
-            End
-            Begin VB.CheckBox chkWidgetHidden 
-               Caption         =   "Hiding Widget *"
-               Height          =   225
-               Left            =   855
-               TabIndex        =   136
-               Top             =   225
-               Width           =   2955
-            End
-            Begin VB.Label lblWindowLevel 
-               Caption         =   "Hiding :"
-               Height          =   345
-               Index           =   2
-               Left            =   90
-               TabIndex        =   139
-               Top             =   210
-               Width           =   720
-            End
-            Begin VB.Label lblWindowLevel 
-               Caption         =   $"frmPrefs.frx":129D
-               Height          =   975
-               Index           =   1
-               Left            =   855
-               TabIndex        =   137
-               Top             =   600
-               Width           =   3900
-            End
-         End
-         Begin VB.ComboBox cmbWindowLevel 
-            Height          =   315
-            Left            =   1305
-            Style           =   2  'Dropdown List
-            TabIndex        =   17
-            ToolTipText     =   $"frmPrefs.frx":1340
-            Top             =   0
-            Width           =   3720
-         End
-         Begin VB.CheckBox chkIgnoreMouse 
-            Caption         =   "Ignore Mouse *"
-            Height          =   225
-            Left            =   1335
-            TabIndex        =   15
-            ToolTipText     =   "Checking this box causes the program to ignore all mouse events."
-            Top             =   1500
-            Width           =   2535
-         End
-         Begin vb6projectCCRSlider.Slider sliOpacity 
-            Height          =   390
-            Left            =   1200
-            TabIndex        =   16
-            ToolTipText     =   "Set the transparency of the Program."
-            Top             =   4560
-            Width           =   3870
-            _ExtentX        =   6826
-            _ExtentY        =   688
-            Min             =   20
-            Max             =   100
-            Value           =   100
-            TickFrequency   =   6
-            SelStart        =   20
-         End
-         Begin VB.Label Label3 
-            Caption         =   "This setting controls the relative layering of this widget. You may use it to place it on top of other windows or underneath. "
-            Height          =   660
-            Left            =   1320
-            TabIndex        =   144
-            Top             =   570
-            Width           =   3810
-         End
-         Begin VB.Label lblWindowLevel 
-            Caption         =   "Window Level :"
-            Height          =   345
-            Index           =   0
-            Left            =   0
-            TabIndex        =   24
-            Top             =   60
-            Width           =   1740
-         End
-         Begin VB.Label lblOpacity20 
-            Caption         =   "20%"
-            Height          =   315
-            Left            =   1290
-            TabIndex        =   23
-            Top             =   5070
-            Width           =   345
-         End
-         Begin VB.Label lblOpacityLabel100 
-            Caption         =   "100%"
-            Height          =   315
-            Left            =   4650
-            TabIndex        =   22
-            Top             =   5070
-            Width           =   405
-         End
-         Begin VB.Label lblOpacityText 
-            Caption         =   "Opacity"
-            Height          =   315
-            Left            =   2775
-            TabIndex        =   21
-            Top             =   5070
-            Width           =   840
-         End
-         Begin VB.Label lblOpacityLabel 
-            Caption         =   "Opacity:"
-            Height          =   315
-            Left            =   555
-            TabIndex        =   20
-            Top             =   4620
-            Width           =   780
-         End
-         Begin VB.Label lblOpacityLabelDesc 
-            Caption         =   "Set the program transparency level. *"
-            Height          =   330
-            Left            =   1335
-            TabIndex        =   19
-            Top             =   5385
-            Width           =   3810
-         End
-         Begin VB.Label lblIgnoreMouseText 
-            Caption         =   "Checking this box causes the program to ignore all mouse events except right click menu interactions."
-            Height          =   660
-            Left            =   1320
-            TabIndex        =   18
-            Top             =   1890
-            Width           =   3810
          End
       End
    End
@@ -2651,7 +2651,7 @@ Private Sub btnSave_Click()
     PzEShowTaskbar = LTrim$(Str$(chkShowTaskbar.Value))
     
     PzEGaugeSize = LTrim$(Str$(sliGaugeSize.Value))
-    PzEScrollWheelDirection = cmbScrollWheelDirection.List(cmbScrollWheelDirection.ListIndex)
+    PzEScrollWheelDirection = LTrim$(cmbScrollWheelDirection.ListIndex)
     
     ' general
     PzEGaugeFunctions = LTrim$(Str$(chkGaugeFunctions.Value))
