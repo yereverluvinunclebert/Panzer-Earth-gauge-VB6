@@ -14,6 +14,246 @@ Begin VB.Form panzerEarthPrefs
    ScaleWidth      =   8970
    StartUpPosition =   3  'Windows Default
    Visible         =   0   'False
+   Begin VB.Frame fraPosition 
+      Caption         =   "Position"
+      Height          =   7440
+      Left            =   240
+      TabIndex        =   48
+      Top             =   1230
+      Visible         =   0   'False
+      Width           =   8520
+      Begin VB.Frame fraPositionInner 
+         BorderStyle     =   0  'None
+         Height          =   6960
+         Left            =   150
+         TabIndex        =   49
+         Top             =   300
+         Width           =   7680
+         Begin VB.CheckBox chkPreventDragging 
+            Caption         =   "Widget Position Locked. *"
+            Height          =   225
+            Left            =   2265
+            TabIndex        =   142
+            ToolTipText     =   "Checking this box turns off the ability to drag the program with the mouse, locking it in position."
+            Top             =   3465
+            Width           =   2505
+         End
+         Begin VB.TextBox txtPortraitYoffset 
+            Height          =   315
+            Left            =   2250
+            TabIndex        =   83
+            ToolTipText     =   "Enter a prefix/nickname for outgoing messages."
+            Top             =   6465
+            Width           =   2130
+         End
+         Begin VB.TextBox txtPortraitHoffset 
+            Height          =   315
+            Left            =   2250
+            TabIndex        =   81
+            ToolTipText     =   "Enter a prefix/nickname for outgoing messages."
+            Top             =   6000
+            Width           =   2130
+         End
+         Begin VB.TextBox txtLandscapeVoffset 
+            Height          =   315
+            Left            =   2250
+            TabIndex        =   79
+            ToolTipText     =   "Enter a prefix/nickname for outgoing messages."
+            Top             =   4875
+            Width           =   2130
+         End
+         Begin VB.TextBox txtLandscapeHoffset 
+            Height          =   315
+            Left            =   2250
+            TabIndex        =   77
+            Top             =   4425
+            Width           =   2130
+         End
+         Begin VB.ComboBox cmbWidgetLandscape 
+            Height          =   315
+            ItemData        =   "frmPrefs.frx":10CA
+            Left            =   2250
+            List            =   "frmPrefs.frx":10CC
+            Style           =   2  'Dropdown List
+            TabIndex        =   75
+            ToolTipText     =   "Choose the alarm sound."
+            Top             =   3930
+            Width           =   2160
+         End
+         Begin VB.ComboBox cmbWidgetPortrait 
+            Height          =   315
+            ItemData        =   "frmPrefs.frx":10CE
+            Left            =   2250
+            List            =   "frmPrefs.frx":10D0
+            Style           =   2  'Dropdown List
+            TabIndex        =   72
+            ToolTipText     =   "Choose the alarm sound."
+            Top             =   5505
+            Width           =   2160
+         End
+         Begin VB.ComboBox cmbWidgetPosition 
+            Height          =   315
+            ItemData        =   "frmPrefs.frx":10D2
+            Left            =   2265
+            List            =   "frmPrefs.frx":10D4
+            Style           =   2  'Dropdown List
+            TabIndex        =   69
+            ToolTipText     =   "Choose the alarm sound."
+            Top             =   2100
+            Width           =   2160
+         End
+         Begin VB.ComboBox cmbAspectHidden 
+            Height          =   315
+            ItemData        =   "frmPrefs.frx":10D6
+            Left            =   2265
+            List            =   "frmPrefs.frx":10D8
+            Style           =   2  'Dropdown List
+            TabIndex        =   66
+            ToolTipText     =   "Choose the alarm sound."
+            Top             =   0
+            Width           =   2160
+         End
+         Begin VB.Label lblPosition 
+            Caption         =   "*"
+            Height          =   255
+            Index           =   1
+            Left            =   4545
+            TabIndex        =   145
+            Tag             =   "lblAlarmSound"
+            Top             =   45
+            Width           =   345
+         End
+         Begin VB.Label Label2 
+            Caption         =   "(px)"
+            Height          =   300
+            Left            =   4530
+            TabIndex        =   141
+            Tag             =   "lblPrefixString"
+            Top             =   4905
+            Width           =   435
+         End
+         Begin VB.Label Label1 
+            Caption         =   "(px)"
+            Height          =   300
+            Left            =   4530
+            TabIndex        =   140
+            Tag             =   "lblPrefixString"
+            Top             =   4500
+            Width           =   390
+         End
+         Begin VB.Label lblPosition 
+            Caption         =   "Portrait Top Y pos :"
+            Height          =   510
+            Index           =   17
+            Left            =   720
+            TabIndex        =   84
+            Tag             =   "lblPrefixString"
+            Top             =   6480
+            Width           =   2175
+         End
+         Begin VB.Label lblPosition 
+            Caption         =   "Portrait Left X pos :"
+            Height          =   510
+            Index           =   16
+            Left            =   660
+            TabIndex        =   82
+            Tag             =   "lblPrefixString"
+            Top             =   6015
+            Width           =   2175
+         End
+         Begin VB.Label lblPosition 
+            Caption         =   "Landscape Top Y pos :"
+            Height          =   510
+            Index           =   15
+            Left            =   480
+            TabIndex        =   80
+            Tag             =   "lblPrefixString"
+            Top             =   4905
+            Width           =   2175
+         End
+         Begin VB.Label lblPosition 
+            Caption         =   "Landscape Left X pos :"
+            Height          =   510
+            Index           =   14
+            Left            =   480
+            TabIndex        =   78
+            Tag             =   "lblPrefixString"
+            Top             =   4455
+            Width           =   2175
+         End
+         Begin VB.Label lblPosition 
+            Caption         =   "Widget Locked in Landscape:"
+            Height          =   375
+            Index           =   13
+            Left            =   0
+            TabIndex        =   76
+            Tag             =   "lblAlarmSound"
+            Top             =   3975
+            Width           =   2205
+         End
+         Begin VB.Label lblPosition 
+            Caption         =   $"frmPrefs.frx":10DA
+            Height          =   3120
+            Index           =   12
+            Left            =   5145
+            TabIndex        =   74
+            Tag             =   "lblAlarmSoundDesc"
+            Top             =   3480
+            Width           =   2520
+         End
+         Begin VB.Label lblPosition 
+            Caption         =   "Widget Locked in Portrait:"
+            Height          =   375
+            Index           =   11
+            Left            =   300
+            TabIndex        =   73
+            Tag             =   "lblAlarmSound"
+            Top             =   5550
+            Width           =   2040
+         End
+         Begin VB.Label lblPosition 
+            Caption         =   $"frmPrefs.frx":12AC
+            Height          =   705
+            Index           =   10
+            Left            =   2250
+            TabIndex        =   71
+            Tag             =   "lblAlarmSoundDesc"
+            Top             =   2550
+            Width           =   4455
+         End
+         Begin VB.Label lblPosition 
+            Caption         =   "Widget Position by Percent:"
+            Height          =   375
+            Index           =   8
+            Left            =   180
+            TabIndex        =   70
+            Tag             =   "lblAlarmSound"
+            Top             =   2145
+            Width           =   2355
+         End
+         Begin VB.Label lblPosition 
+            Caption         =   $"frmPrefs.frx":134B
+            Height          =   3045
+            Index           =   6
+            Left            =   2265
+            TabIndex        =   68
+            Tag             =   "lblAlarmSoundDesc"
+            ToolTipText     =   $"frmPrefs.frx":14F0
+            Top             =   450
+            Width           =   5175
+         End
+         Begin VB.Label lblPosition 
+            Caption         =   "Aspect Ratio Hidden Mode :"
+            Height          =   375
+            Index           =   3
+            Left            =   120
+            TabIndex        =   67
+            Tag             =   "lblAlarmSound"
+            Top             =   45
+            Width           =   2145
+         End
+      End
+   End
    Begin VB.Frame fraWindow 
       Caption         =   "Window"
       Height          =   6300
@@ -61,7 +301,7 @@ Begin VB.Form panzerEarthPrefs
                Width           =   720
             End
             Begin VB.Label lblWindowLevel 
-               Caption         =   $"frmPrefs.frx":10CA
+               Caption         =   $"frmPrefs.frx":1695
                Height          =   975
                Index           =   1
                Left            =   855
@@ -75,7 +315,7 @@ Begin VB.Form panzerEarthPrefs
             Left            =   1305
             Style           =   2  'Dropdown List
             TabIndex        =   17
-            ToolTipText     =   $"frmPrefs.frx":116D
+            ToolTipText     =   $"frmPrefs.frx":1738
             Top             =   0
             Width           =   3720
          End
@@ -207,12 +447,12 @@ Begin VB.Form panzerEarthPrefs
                Left            =   1440
                TabIndex        =   150
                Text            =   " eg. E:\vb6\fire call\FireCallWin.vbp"
-               ToolTipText     =   $"frmPrefs.frx":11FA
+               ToolTipText     =   $"frmPrefs.frx":17C5
                Top             =   195
                Width           =   3660
             End
             Begin VB.Label lblDebug 
-               Caption         =   $"frmPrefs.frx":128C
+               Caption         =   $"frmPrefs.frx":1857
                Height          =   930
                Index           =   9
                Left            =   1545
@@ -231,7 +471,7 @@ Begin VB.Form panzerEarthPrefs
                Width           =   1350
             End
             Begin VB.Label lblGitHub 
-               Caption         =   $"frmPrefs.frx":1330
+               Caption         =   $"frmPrefs.frx":18FB
                ForeColor       =   &H8000000D&
                Height          =   885
                Left            =   1530
@@ -269,9 +509,9 @@ Begin VB.Form panzerEarthPrefs
          End
          Begin VB.ComboBox cmbDebug 
             Height          =   315
-            ItemData        =   "frmPrefs.frx":13C5
+            ItemData        =   "frmPrefs.frx":1990
             Left            =   1530
-            List            =   "frmPrefs.frx":13C7
+            List            =   "frmPrefs.frx":1992
             Style           =   2  'Dropdown List
             TabIndex        =   56
             ToolTipText     =   "Choose to set debug mode."
@@ -410,9 +650,9 @@ Begin VB.Form panzerEarthPrefs
          End
          Begin VB.ComboBox cmbScrollWheelDirection 
             Height          =   315
-            ItemData        =   "frmPrefs.frx":13C9
+            ItemData        =   "frmPrefs.frx":1994
             Left            =   1995
-            List            =   "frmPrefs.frx":13CB
+            List            =   "frmPrefs.frx":1996
             Style           =   2  'Dropdown List
             TabIndex        =   90
             ToolTipText     =   "To change the direction of the mouse scroll wheel when resiziing the globe gauge."
@@ -594,7 +834,7 @@ Begin VB.Form panzerEarthPrefs
       Begin VB.Image imgAbout 
          Height          =   600
          Left            =   160
-         Picture         =   "frmPrefs.frx":13CD
+         Picture         =   "frmPrefs.frx":1998
          Stretch         =   -1  'True
          Top             =   225
          Width           =   600
@@ -602,7 +842,7 @@ Begin VB.Form panzerEarthPrefs
       Begin VB.Image imgAboutClicked 
          Height          =   600
          Left            =   160
-         Picture         =   "frmPrefs.frx":1955
+         Picture         =   "frmPrefs.frx":1F20
          Stretch         =   -1  'True
          Top             =   225
          Width           =   600
@@ -627,7 +867,7 @@ Begin VB.Form panzerEarthPrefs
       Begin VB.Image imgConfig 
          Height          =   600
          Left            =   165
-         Picture         =   "frmPrefs.frx":1E40
+         Picture         =   "frmPrefs.frx":240B
          Stretch         =   -1  'True
          Top             =   225
          Width           =   600
@@ -635,7 +875,7 @@ Begin VB.Form panzerEarthPrefs
       Begin VB.Image imgConfigClicked 
          Height          =   600
          Left            =   165
-         Picture         =   "frmPrefs.frx":241F
+         Picture         =   "frmPrefs.frx":29EA
          Stretch         =   -1  'True
          Top             =   225
          Width           =   600
@@ -659,7 +899,7 @@ Begin VB.Form panzerEarthPrefs
       Begin VB.Image imgDevelopment 
          Height          =   600
          Left            =   160
-         Picture         =   "frmPrefs.frx":291A
+         Picture         =   "frmPrefs.frx":2EE5
          Stretch         =   -1  'True
          Top             =   225
          Width           =   600
@@ -667,7 +907,7 @@ Begin VB.Form panzerEarthPrefs
       Begin VB.Image imgDevelopmentClicked 
          Height          =   600
          Left            =   160
-         Picture         =   "frmPrefs.frx":2ED2
+         Picture         =   "frmPrefs.frx":349D
          Stretch         =   -1  'True
          Top             =   225
          Width           =   600
@@ -692,7 +932,7 @@ Begin VB.Form panzerEarthPrefs
       Begin VB.Image imgPosition 
          Height          =   600
          Left            =   160
-         Picture         =   "frmPrefs.frx":3258
+         Picture         =   "frmPrefs.frx":3823
          Stretch         =   -1  'True
          Top             =   225
          Width           =   600
@@ -700,7 +940,7 @@ Begin VB.Form panzerEarthPrefs
       Begin VB.Image imgPositionClicked 
          Height          =   600
          Left            =   160
-         Picture         =   "frmPrefs.frx":3829
+         Picture         =   "frmPrefs.frx":3DF4
          Stretch         =   -1  'True
          Top             =   225
          Width           =   600
@@ -745,7 +985,7 @@ Begin VB.Form panzerEarthPrefs
       Begin VB.Image imgSounds 
          Height          =   600
          Left            =   160
-         Picture         =   "frmPrefs.frx":3BC7
+         Picture         =   "frmPrefs.frx":4192
          Stretch         =   -1  'True
          Top             =   225
          Width           =   600
@@ -753,7 +993,7 @@ Begin VB.Form panzerEarthPrefs
       Begin VB.Image imgSoundsClicked 
          Height          =   600
          Left            =   160
-         Picture         =   "frmPrefs.frx":4186
+         Picture         =   "frmPrefs.frx":4751
          Stretch         =   -1  'True
          Top             =   225
          Width           =   600
@@ -793,7 +1033,7 @@ Begin VB.Form panzerEarthPrefs
       Begin VB.Image imgWindow 
          Height          =   600
          Left            =   160
-         Picture         =   "frmPrefs.frx":45C5
+         Picture         =   "frmPrefs.frx":4B90
          Stretch         =   -1  'True
          Top             =   225
          Width           =   600
@@ -801,7 +1041,7 @@ Begin VB.Form panzerEarthPrefs
       Begin VB.Image imgWindowClicked 
          Height          =   600
          Left            =   160
-         Picture         =   "frmPrefs.frx":4A8F
+         Picture         =   "frmPrefs.frx":505A
          Stretch         =   -1  'True
          Top             =   225
          Width           =   600
@@ -825,7 +1065,7 @@ Begin VB.Form panzerEarthPrefs
       Begin VB.Image imgFonts 
          Height          =   600
          Left            =   180
-         Picture         =   "frmPrefs.frx":4E3B
+         Picture         =   "frmPrefs.frx":5406
          Stretch         =   -1  'True
          Top             =   195
          Width           =   600
@@ -833,7 +1073,7 @@ Begin VB.Form panzerEarthPrefs
       Begin VB.Image imgFontsClicked 
          Height          =   600
          Left            =   180
-         Picture         =   "frmPrefs.frx":5391
+         Picture         =   "frmPrefs.frx":595C
          Stretch         =   -1  'True
          Top             =   195
          Width           =   600
@@ -857,7 +1097,7 @@ Begin VB.Form panzerEarthPrefs
       Begin VB.Image imgGeneral 
          Height          =   600
          Left            =   165
-         Picture         =   "frmPrefs.frx":582A
+         Picture         =   "frmPrefs.frx":5DF5
          Stretch         =   -1  'True
          Top             =   225
          Width           =   600
@@ -865,7 +1105,7 @@ Begin VB.Form panzerEarthPrefs
       Begin VB.Image imgGeneralClicked 
          Height          =   600
          Left            =   165
-         Picture         =   "frmPrefs.frx":5C86
+         Picture         =   "frmPrefs.frx":6251
          Stretch         =   -1  'True
          Top             =   240
          Width           =   600
@@ -1116,7 +1356,7 @@ Begin VB.Form panzerEarthPrefs
             Width           =   4035
          End
          Begin VB.Label lblFontsTab 
-            Caption         =   $"frmPrefs.frx":5F59
+            Caption         =   $"frmPrefs.frx":6524
             Height          =   900
             Index           =   0
             Left            =   1665
@@ -1165,246 +1405,6 @@ Begin VB.Form panzerEarthPrefs
             ToolTipText     =   "We suggest Centurion Light SF at 8pt - which you will find in the FCW program folder"
             Top             =   480
             Width           =   4035
-         End
-      End
-   End
-   Begin VB.Frame fraPosition 
-      Caption         =   "Position"
-      Height          =   7440
-      Left            =   240
-      TabIndex        =   48
-      Top             =   1230
-      Visible         =   0   'False
-      Width           =   8520
-      Begin VB.Frame fraPositionInner 
-         BorderStyle     =   0  'None
-         Height          =   6960
-         Left            =   150
-         TabIndex        =   49
-         Top             =   300
-         Width           =   7680
-         Begin VB.CheckBox chkPreventDragging 
-            Caption         =   "Widget Position Locked. *"
-            Height          =   225
-            Left            =   2265
-            TabIndex        =   142
-            ToolTipText     =   "Checking this box turns off the ability to drag the program with the mouse, locking it in position."
-            Top             =   3465
-            Width           =   2505
-         End
-         Begin VB.TextBox txtPortraitYoffset 
-            Height          =   315
-            Left            =   2250
-            TabIndex        =   83
-            ToolTipText     =   "Enter a prefix/nickname for outgoing messages."
-            Top             =   6465
-            Width           =   2130
-         End
-         Begin VB.TextBox txtPortraitHoffset 
-            Height          =   315
-            Left            =   2250
-            TabIndex        =   81
-            ToolTipText     =   "Enter a prefix/nickname for outgoing messages."
-            Top             =   6000
-            Width           =   2130
-         End
-         Begin VB.TextBox txtLandscapeVoffset 
-            Height          =   315
-            Left            =   2250
-            TabIndex        =   79
-            ToolTipText     =   "Enter a prefix/nickname for outgoing messages."
-            Top             =   4875
-            Width           =   2130
-         End
-         Begin VB.TextBox txtLandscapeHoffset 
-            Height          =   315
-            Left            =   2250
-            TabIndex        =   77
-            Top             =   4425
-            Width           =   2130
-         End
-         Begin VB.ComboBox cmbWidgetLandscape 
-            Height          =   315
-            ItemData        =   "frmPrefs.frx":6014
-            Left            =   2250
-            List            =   "frmPrefs.frx":6016
-            Style           =   2  'Dropdown List
-            TabIndex        =   75
-            ToolTipText     =   "Choose the alarm sound."
-            Top             =   3930
-            Width           =   2160
-         End
-         Begin VB.ComboBox cmbWidgetPortrait 
-            Height          =   315
-            ItemData        =   "frmPrefs.frx":6018
-            Left            =   2250
-            List            =   "frmPrefs.frx":601A
-            Style           =   2  'Dropdown List
-            TabIndex        =   72
-            ToolTipText     =   "Choose the alarm sound."
-            Top             =   5505
-            Width           =   2160
-         End
-         Begin VB.ComboBox cmbWidgetPosition 
-            Height          =   315
-            ItemData        =   "frmPrefs.frx":601C
-            Left            =   2265
-            List            =   "frmPrefs.frx":601E
-            Style           =   2  'Dropdown List
-            TabIndex        =   69
-            ToolTipText     =   "Choose the alarm sound."
-            Top             =   2100
-            Width           =   2160
-         End
-         Begin VB.ComboBox cmbAspectHidden 
-            Height          =   315
-            ItemData        =   "frmPrefs.frx":6020
-            Left            =   2265
-            List            =   "frmPrefs.frx":6022
-            Style           =   2  'Dropdown List
-            TabIndex        =   66
-            ToolTipText     =   "Choose the alarm sound."
-            Top             =   0
-            Width           =   2160
-         End
-         Begin VB.Label lblPosition 
-            Caption         =   "*"
-            Height          =   255
-            Index           =   1
-            Left            =   4545
-            TabIndex        =   145
-            Tag             =   "lblAlarmSound"
-            Top             =   45
-            Width           =   345
-         End
-         Begin VB.Label Label2 
-            Caption         =   "(px)"
-            Height          =   300
-            Left            =   4530
-            TabIndex        =   141
-            Tag             =   "lblPrefixString"
-            Top             =   4905
-            Width           =   435
-         End
-         Begin VB.Label Label1 
-            Caption         =   "(px)"
-            Height          =   300
-            Left            =   4530
-            TabIndex        =   140
-            Tag             =   "lblPrefixString"
-            Top             =   4500
-            Width           =   390
-         End
-         Begin VB.Label lblPosition 
-            Caption         =   "Portrait Top Y pos :"
-            Height          =   510
-            Index           =   17
-            Left            =   720
-            TabIndex        =   84
-            Tag             =   "lblPrefixString"
-            Top             =   6480
-            Width           =   2175
-         End
-         Begin VB.Label lblPosition 
-            Caption         =   "Portrait Left X pos :"
-            Height          =   510
-            Index           =   16
-            Left            =   660
-            TabIndex        =   82
-            Tag             =   "lblPrefixString"
-            Top             =   6015
-            Width           =   2175
-         End
-         Begin VB.Label lblPosition 
-            Caption         =   "Landscape Top Y pos :"
-            Height          =   510
-            Index           =   15
-            Left            =   480
-            TabIndex        =   80
-            Tag             =   "lblPrefixString"
-            Top             =   4905
-            Width           =   2175
-         End
-         Begin VB.Label lblPosition 
-            Caption         =   "Landscape Left X pos :"
-            Height          =   510
-            Index           =   14
-            Left            =   480
-            TabIndex        =   78
-            Tag             =   "lblPrefixString"
-            Top             =   4455
-            Width           =   2175
-         End
-         Begin VB.Label lblPosition 
-            Caption         =   "Widget Locked in Landscape:"
-            Height          =   375
-            Index           =   13
-            Left            =   0
-            TabIndex        =   76
-            Tag             =   "lblAlarmSound"
-            Top             =   3975
-            Width           =   2205
-         End
-         Begin VB.Label lblPosition 
-            Caption         =   $"frmPrefs.frx":6024
-            Height          =   3120
-            Index           =   12
-            Left            =   5145
-            TabIndex        =   74
-            Tag             =   "lblAlarmSoundDesc"
-            Top             =   3480
-            Width           =   2520
-         End
-         Begin VB.Label lblPosition 
-            Caption         =   "Widget Locked in Portrait:"
-            Height          =   375
-            Index           =   11
-            Left            =   300
-            TabIndex        =   73
-            Tag             =   "lblAlarmSound"
-            Top             =   5550
-            Width           =   2040
-         End
-         Begin VB.Label lblPosition 
-            Caption         =   $"frmPrefs.frx":61F6
-            Height          =   705
-            Index           =   10
-            Left            =   2250
-            TabIndex        =   71
-            Tag             =   "lblAlarmSoundDesc"
-            Top             =   2550
-            Width           =   4455
-         End
-         Begin VB.Label lblPosition 
-            Caption         =   "Widget Position by Percent:"
-            Height          =   375
-            Index           =   8
-            Left            =   180
-            TabIndex        =   70
-            Tag             =   "lblAlarmSound"
-            Top             =   2145
-            Width           =   2355
-         End
-         Begin VB.Label lblPosition 
-            Caption         =   $"frmPrefs.frx":6295
-            Height          =   3045
-            Index           =   6
-            Left            =   2265
-            TabIndex        =   68
-            Tag             =   "lblAlarmSoundDesc"
-            ToolTipText     =   $"frmPrefs.frx":643A
-            Top             =   450
-            Width           =   5175
-         End
-         Begin VB.Label lblPosition 
-            Caption         =   "Aspect Ratio Hidden Mode :"
-            Height          =   375
-            Index           =   3
-            Left            =   120
-            TabIndex        =   67
-            Tag             =   "lblAlarmSound"
-            Top             =   45
-            Width           =   2145
          End
       End
    End
@@ -1814,6 +1814,8 @@ Private Const cFormWidth  As Long = 9090
 Private topIconWidth As Long
 
 
+
+
 '---------------------------------------------------------------------------------------
 ' Procedure : chkShowTaskbar_Click
 ' Author    : beededea
@@ -2161,6 +2163,7 @@ Private Sub chkPreventDragging_Click()
     If chkPreventDragging.Value = 0 Then
         globeWidget.Locked = 0
         PzEPreventDragging = "0"
+        menuForm.mnuLockWidget.Checked = False
         If aspectRatio = "landscape" Then
             txtLandscapeHoffset.Text = vbNullString
             txtLandscapeVoffset.Text = vbNullString
@@ -2171,6 +2174,7 @@ Private Sub chkPreventDragging_Click()
     Else
         globeWidget.Locked = 1
         PzEPreventDragging = "1"
+        menuForm.mnuLockWidget.Checked = True
         If aspectRatio = "landscape" Then
             txtLandscapeHoffset.Text = fMain.globeForm.Left
             txtLandscapeVoffset.Text = fMain.globeForm.Top
@@ -3435,6 +3439,7 @@ Private Sub Form_MouseDown(ByRef Button As Integer, ByRef Shift As Integer, ByRe
         Me.PopupMenu prefsMnuPopmenu, vbPopupMenuRightButton
         
     End If
+    
 End Sub
 
 'Private Sub fraEmail_MouseDown(ByRef Button As Integer, ByRef Shift As Integer, ByRef x As Single, ByRef y As Single)

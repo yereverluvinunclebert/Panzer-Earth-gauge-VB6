@@ -269,8 +269,8 @@
 ' swapped the acripting.fileSystemObject code from fFileExists for OpenFile API avoiding Wine error - done
 ' swapped the acripting.fileSystemObject code from fFileExists for PathIsDirectoryAPI avoiding Wine error - done
 
-' test on win 7 32bit - study 2nd PC - wip 
-' test on win 10 64bit - study 1st  PC - wip
+' test on win 7 32bit - study 2nd PC - wip
+' test on win 10 64bit - study 1st  PC - done
 
 ' -oOo-
 
@@ -305,43 +305,4 @@
 ' add pin 'widget' layer as a trial with a function, change of image and a sound, size, opacity properties that match the globe
 ' add logic to each of the graphic controls - WIP
 
-' Problems Widget layers:
-
-' When you have multiple widgets, one for each layer that needs to act as a control,
-' the topmost layer takes all the clicks even if the layer has transparency. It does
-' not pass it down to the widget below. Each layer is a virtual rectangular layer
-' that acts as if it is fully opaque and not transparent at all. ie. Clicks don't
-' fall through transparency to the layer below as I am accustomed to with YWE and Xw.
-
-' Problems W_HitTest regions:
-
-' Using RC widgets, you can add a W_HitTest function that matches a bordered region
-' such as an arc that forms a full circle or an ellipse/rectangle &c. It will test 
-' successfully for a mouse event if you do this and also remember to set:
-'              W.ImplementsHitTest = True.
-'
-' However, the pain of having to draw a region for every area that needs to be
-' active using ellipses, arcs or rectangles to respond to a hittest is primitive 
-' and worse than that, would be painful to set up.
-'
-' In any case, that is not possible, the trouble is, a hitTest will ONLY respond to
-' mouse events within that single defined region. All other mouse interactions 
-' outside the area are ignored. That's useless to a program that needs multiple
-' areas to respond to. You cannot set up multiple hitTest areas to respond to 
-' hit events.
-
-' The standard mouseDown can report X and Y positions but you would have to test
-' the values manually for every layer/area. Not practical.
-
-' OUTCOME:
-
-' RC5 is not currently suitable for creating desktop programs emulating Y widgets
-' that need to have interacting regions. It is only suitable for clocks or for
-' programs that can be controlled via menus and complex preferences.
-'
-' To overcome this limitation I would have to create a RC widget class for 
-' each item that needs to respond to user interaction. Each would be a virtual 
-' rectangle acting as if it was actually opaque. The rectangles cannot overlap.
-' it might be worth doing for one or two controls but for a Ywidget equivalent
-' with multiple interacting regions it is completely unsuitable.
 
