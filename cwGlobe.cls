@@ -533,6 +533,8 @@ Private Sub W_MouseWheel(ByVal MouseKeys As Long, ByVal Rotation As Long, ByVal 
             Zoom = Zoom + 0.02 * LineOffset
         End If
         PzEGaugeSize = LTrim$(Str$(globeWidget.Zoom * 100)) ' store the value dynamically
+        sPutINISetting "Software\PzEarth", "gaugeSize", PzEGaugeSize, PzESettingsFile
+        
         If panzerEarthPrefs.IsVisible = True Then panzerEarthPrefs.sliGaugeSize = Val(PzEGaugeSize)
 
     End Select
