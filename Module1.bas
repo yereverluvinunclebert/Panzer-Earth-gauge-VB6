@@ -1430,7 +1430,7 @@ Public Sub aboutClickEvent()
     fMain.aboutForm.show
     
     'aboutWidget.opacity = 0
-    aboutWidget.show = True
+    aboutWidget.showMe = True
     aboutWidget.Widget.Refresh
     
      If (fMain.aboutForm.WindowState = 1) Then

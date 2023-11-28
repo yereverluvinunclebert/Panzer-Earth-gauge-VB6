@@ -26,13 +26,13 @@ Private WithEvents tmrFadeIn As cTimer
 Attribute tmrFadeIn.VB_VarHelpID = -1
 Private WithEvents tmrFadeOut As cTimer
 Attribute tmrFadeOut.VB_VarHelpID = -1
-Private mOpacity As Double
-Private mShow As Boolean
+Private mMyOpacity As Double
+Private mshowMe As Boolean
 Private aboutxo As Integer
 Private aboutyo As Integer
 
-'property opacity
-'property show
+'property MyOpacity
+'property showMe
 
 
 '---------------------------------------------------------------------------------------
@@ -48,8 +48,8 @@ Private Sub Class_Initialize()
 
     aboutxo = 0
     aboutyo = 0
-    opacity = 0
-    show = False
+    MyOpacity = 0
+    showMe = False
 
     Set W = Cairo.WidgetBase '<- this is required in each cwImplementation...
    
@@ -86,82 +86,82 @@ W_MouseDown_Error:
     MsgBox "Error " & Err.Number & " (" & Err.Description & ") in procedure W_MouseDown of Class Module cwAbout"
 End Sub
 '---------------------------------------------------------------------------------------
-' Procedure : opacity
+' Procedure : MyOpacity
 ' Author    : beededea
 ' Date      : 17/05/2023
 ' Purpose   :
 '---------------------------------------------------------------------------------------
 '
-Public Property Let opacity(ByVal newValue As Double)
-   On Error GoTo opacityLet_Error
+Public Property Let MyOpacity(ByVal newValue As Double)
+   On Error GoTo MyOpacityLet_Error
 
-  If mOpacity <> newValue Then mOpacity = newValue Else Exit Property
+  If mMyOpacity <> newValue Then mMyOpacity = newValue Else Exit Property
 
    On Error GoTo 0
    Exit Property
 
-opacityLet_Error:
+MyOpacityLet_Error:
 
-    MsgBox "Error " & Err.Number & " (" & Err.Description & ") in procedure opacity of Class Module cwAbout"
+    MsgBox "Error " & Err.Number & " (" & Err.Description & ") in procedure MyOpacity of Class Module cwAbout"
 End Property
 '---------------------------------------------------------------------------------------
-' Procedure : opacity
+' Procedure : MyOpacity
 ' Author    : beededea
 ' Date      : 17/05/2023
 ' Purpose   :
 '---------------------------------------------------------------------------------------
 '
-Public Property Get opacity() As Double
-   On Error GoTo opacityGet_Error
+Public Property Get MyOpacity() As Double
+   On Error GoTo MyOpacityGet_Error
 
-  opacity = mOpacity
+  MyOpacity = mMyOpacity
 
    On Error GoTo 0
    Exit Property
 
-opacityGet_Error:
+MyOpacityGet_Error:
 
-    MsgBox "Error " & Err.Number & " (" & Err.Description & ") in procedure opacity of Class Module cwAbout"
+    MsgBox "Error " & Err.Number & " (" & Err.Description & ") in procedure MyOpacity of Class Module cwAbout"
 End Property
 
 '---------------------------------------------------------------------------------------
-' Procedure : show
+' Procedure : showMe
 ' Author    : beededea
 ' Date      : 17/05/2023
 ' Purpose   :
 '---------------------------------------------------------------------------------------
 '
-Public Property Let show(ByVal newValue As Boolean)
-    On Error GoTo showLet_Error
+Public Property Let showMe(ByVal newValue As Boolean)
+    On Error GoTo showMeLet_Error
 
-    mShow = newValue
-    If mShow = True Then tmrFadeIn.Enabled = True
+    mshowMe = newValue
+    If mshowMe = True Then tmrFadeIn.Enabled = True
     
     On Error GoTo 0
     Exit Property
 
-showLet_Error:
+showMeLet_Error:
 
-    MsgBox "Error " & Err.Number & " (" & Err.Description & ") in procedure show of Class Module cwAbout"
+    MsgBox "Error " & Err.Number & " (" & Err.Description & ") in procedure showMe of Class Module cwAbout"
 End Property
 '---------------------------------------------------------------------------------------
-' Procedure : show
+' Procedure : showMe
 ' Author    : beededea
 ' Date      : 17/05/2023
 ' Purpose   :
 '---------------------------------------------------------------------------------------
 '
-Public Property Get show() As Boolean
-   On Error GoTo showGet_Error
+Public Property Get showMe() As Boolean
+   On Error GoTo showMeGet_Error
 
-   show = mShow
+   showMe = mshowMe
 
    On Error GoTo 0
    Exit Property
 
-showGet_Error:
+showMeGet_Error:
 
-    MsgBox "Error " & Err.Number & " (" & Err.Description & ") in procedure show of Class Module cwAbout"
+    MsgBox "Error " & Err.Number & " (" & Err.Description & ") in procedure showMe of Class Module cwAbout"
 End Property
 
 '
@@ -175,10 +175,10 @@ End Property
 Private Sub tmrFadeIn_Timer()
       
    On Error GoTo tmrFadeIn_Timer_Error
-        fMain.aboutForm.show
-        opacity = opacity + 0.05
-        If opacity >= 1 Then
-            opacity = 1
+        fMain.aboutForm.Show
+        MyOpacity = MyOpacity + 0.05
+        If MyOpacity >= 1 Then
+            MyOpacity = 1
 
             tmrFadeIn.Enabled = False
 
@@ -205,9 +205,9 @@ Private Sub tmrFadeOut_Timer()
       
    On Error GoTo tmrFadeOut_Timer_Error
 
-        opacity = opacity - 0.05
-        If opacity < 0 Then
-            opacity = 0
+        MyOpacity = MyOpacity - 0.05
+        If MyOpacity < 0 Then
+            MyOpacity = 0
 
             tmrFadeOut.Enabled = False
             fMain.aboutForm.Hide
@@ -233,7 +233,7 @@ End Sub
 Private Sub W_Paint(CC As vbRichClient5.cCairoContext, ByVal xAbs As Single, ByVal yAbs As Single, ByVal dx_Aligned As Single, ByVal dy_Aligned As Single, UserObj As Object)
    On Error GoTo W_Paint_Error
 
-    Draw CC, dx_Aligned, dy_Aligned, mOpacity
+    Draw CC, dx_Aligned, dy_Aligned, mMyOpacity
 
    On Error GoTo 0
    Exit Sub
@@ -250,10 +250,10 @@ End Sub
 ' Purpose   :
 '---------------------------------------------------------------------------------------
 '
-Private Sub Draw(ByRef CC As cCairoContext, ByVal dx As Single, ByVal dy As Single, ByVal mOpacity As Double)
+Private Sub Draw(ByRef CC As cCairoContext, ByVal dx As Single, ByVal dy As Single, ByVal mMyOpacity As Double)
    On Error GoTo Draw_Error
 
-    CC.RenderSurfaceContent "about", aboutxo, aboutyo, , , , mOpacity
+    CC.RenderSurfaceContent "about", aboutxo, aboutyo, , , , mMyOpacity
         
     'set some Font- and ForeColor-Properties and draw some Text on the Widget
     W.FontItalic = True
@@ -261,7 +261,7 @@ Private Sub Draw(ByRef CC As cCairoContext, ByVal dx As Single, ByVal dy As Sing
     W.ForeColor = vbBlack
     W.SelectFontSettingsInto CC
     
-    CC.DrawText 0, 0, dx + 350, dy - 390, "                                                                                                                            version " & App.Major & "." & App.Minor & "." & App.Revision & vbNullString, , , 2, True, , mOpacity
+    CC.DrawText 0, 0, dx + 350, dy - 390, "                                                                                                                            version " & App.Major & "." & App.Minor & "." & App.Revision & vbNullString, , , 2, True, , mMyOpacity
 
    On Error GoTo 0
    Exit Sub
