@@ -333,6 +333,10 @@ Public PzEFirstTimeRun  As String
 ' General storage variables declared
 Public PzESettingsDir As String
 Public PzESettingsFile As String
+
+Public PzETrinketsDir      As String
+Public PzETrinketsFile      As String
+
 Public PzEMaximiseFormX As String
 Public PzEMaximiseFormY As String
 Public PzELastSelectedTab As String
@@ -625,7 +629,7 @@ Public Sub checkLicenceState()
         If slicence = "0" Then
             Call LoadFileToTB(frmLicence.txtLicenceTextBox, App.Path & "\Resources\txt\licence.txt", False)
             
-            frmLicence.show vbModal ' show the licence screen in VB modal mode (ie. on its own)
+            frmLicence.Show vbModal ' show the licence screen in VB modal mode (ie. on its own)
             ' on the licence box change the state fo the licence acceptance
         End If
     End If
@@ -1427,7 +1431,7 @@ Public Sub aboutClickEvent()
     fMain.aboutForm.Left = (screenWidthPixels / 2) - (fMain.aboutForm.Width / 2)
      
     fMain.aboutForm.Load
-    fMain.aboutForm.show
+    fMain.aboutForm.Show
     
     'aboutWidget.opacity = 0
     aboutWidget.showMe = True
@@ -1508,7 +1512,7 @@ Public Sub mnuLicence_ClickEvent()
    On Error GoTo mnuLicence_ClickEvent_Error
 
     Call LoadFileToTB(frmLicence.txtLicenceTextBox, App.Path & "\Resources\txt\licence.txt", False)
-    frmLicence.show
+    frmLicence.Show
 
    On Error GoTo 0
    Exit Sub
@@ -1589,7 +1593,7 @@ Public Sub makeVisibleFormElements()
 
     ' The RC forms are measured in pixels, do remember that...
 
-    fMain.globeForm.show
+    fMain.globeForm.Show
 
     On Error GoTo 0
     Exit Sub
@@ -1982,7 +1986,7 @@ Public Sub makeProgramPreferencesAvailable()
             If panzerEarthPrefs.Left < 0 Then panzerEarthPrefs.Left = 0
             If panzerEarthPrefs.Top < 0 Then panzerEarthPrefs.Top = 0
             
-            panzerEarthPrefs.show  ' show it again
+            panzerEarthPrefs.Show  ' show it again
             panzerEarthPrefs.SetFocus
         End If
     End If
